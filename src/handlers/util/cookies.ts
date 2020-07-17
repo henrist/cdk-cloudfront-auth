@@ -105,11 +105,11 @@ export function generateCookies(param: {
     UserAttributes: [
       {
         Name: "sub",
-        Value: decodedIdToken["sub"] as string,
+        Value: decodedIdToken["sub"],
       },
       {
         Name: "email",
-        Value: decodedIdToken["email"] as string,
+        Value: decodedIdToken["email"],
       },
     ],
     Username: tokenUserName,
