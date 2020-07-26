@@ -56,8 +56,8 @@ test("A simple example", () => {
   )
 
   auth.updateClient("ClientUpdate", {
-    signOutUrl: `https://${distribution.domainName}${auth.signOutRedirectTo}`,
-    callbackUrl: `https://${distribution.domainName}${auth.callbackPath}`,
+    signOutUrl: `https://${distribution.distributionDomainName}${auth.signOutRedirectTo}`,
+    callbackUrl: `https://${distribution.distributionDomainName}${auth.callbackPath}`,
   })
 
   expect(stack1).toMatchCdkSnapshot()

@@ -25,7 +25,7 @@ of your choice:
 
 ```ts
 const auth = new CloudFrontAuth(this, "Auth", {
-  cognitoAuthDomain: `${domain.domainName}.auth.${region}.amazoncognito.com`,
+  cognitoAuthDomain: `${domain.distributionDomainName}.auth.${region}.amazoncognito.com`,
   authLambdas, // AuthLambdas from above
   userPool, // Cognito User Pool
 })
@@ -47,7 +47,7 @@ const distribution = new cloudfront.CloudFrontWebDistribution(
   },
 )
 auth.updateClient("ClientUpdate", {
-  signOutUrl: `https://${distribution.domainName}${auth.signOutRedirectTo}`,
-  callbackUrl: `https://${distribution.domainName}${auth.callbackPath}`,
+  signOutUrl: `https://${distribution.distributionDomainName}${auth.signOutRedirectTo}`,
+  callbackUrl: `https://${distribution.distributionDomainName}${auth.callbackPath}`,
 })
 ```
