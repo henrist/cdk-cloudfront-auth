@@ -25,7 +25,7 @@ of your choice:
 
 ```ts
 const auth = new CloudFrontAuth(this, "Auth", {
-  cognitoAuthDomain: `${domain.distributionDomainName}.auth.${region}.amazoncognito.com`,
+  cognitoAuthDomain: `${domain.domainName}.auth.${region}.amazoncognito.com`,
   authLambdas, // AuthLambdas from above
   userPool, // Cognito User Pool
 })
