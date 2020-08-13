@@ -1795,15 +1795,6 @@ Object {
         },
         "EmailVerificationMessage": "The verification code to your new account is {####}",
         "EmailVerificationSubject": "Verify your new account",
-        "SmsConfiguration": Object {
-          "ExternalId": "Stack2UserPool9C0D64B3",
-          "SnsCallerArn": Object {
-            "Fn::GetAtt": Array [
-              "UserPoolsmsRole4EA729DD",
-              "Arn",
-            ],
-          },
-        },
         "SmsVerificationMessage": "The verification code to your new account is {####}",
         "VerificationMessageTemplate": Object {
           "DefaultEmailOption": "CONFIRM_WITH_CODE",
@@ -1845,43 +1836,6 @@ Object {
         },
       },
       "Type": "AWS::Cognito::UserPoolClient",
-    },
-    "UserPoolsmsRole4EA729DD": Object {
-      "Properties": Object {
-        "AssumeRolePolicyDocument": Object {
-          "Statement": Array [
-            Object {
-              "Action": "sts:AssumeRole",
-              "Condition": Object {
-                "StringEquals": Object {
-                  "sts:ExternalId": "Stack2UserPool9C0D64B3",
-                },
-              },
-              "Effect": "Allow",
-              "Principal": Object {
-                "Service": "cognito-idp.amazonaws.com",
-              },
-            },
-          ],
-          "Version": "2012-10-17",
-        },
-        "Policies": Array [
-          Object {
-            "PolicyDocument": Object {
-              "Statement": Array [
-                Object {
-                  "Action": "sns:Publish",
-                  "Effect": "Allow",
-                  "Resource": "*",
-                },
-              ],
-              "Version": "2012-10-17",
-            },
-            "PolicyName": "sns-publish",
-          },
-        ],
-      },
-      "Type": "AWS::IAM::Role",
     },
     "henristcloudfrontauthgeneratesecretproviderFunction3D1AFA99": Object {
       "DependsOn": Array [
