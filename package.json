@@ -57,7 +57,7 @@
     "eslint-plugin-prettier": "3.1.4",
     "html-loader": "1.2.1",
     "husky": "4.2.5",
-    "jest": "26.4.0",
+    "jest": "26.4.2",
     "jest-cdk-snapshot": "1.4.0",
     "jsonwebtoken": "8.5.1",
     "jwks-rsa": "1.9.0",
