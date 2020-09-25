@@ -60,7 +60,7 @@
     "jest": "26.4.2",
     "jest-cdk-snapshot": "1.4.0",
     "jsonwebtoken": "8.5.1",
-    "jwks-rsa": "1.9.0",
+    "jwks-rsa": "1.10.1",
     "prettier": "2.1.2",
     "rimraf": "3.0.2",
     "semantic-release": "17.1.2",
