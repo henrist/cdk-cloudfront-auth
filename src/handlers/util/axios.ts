@@ -1,6 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 
+// Workaround for https://github.com/axios/axios/issues/3219
+/// <reference lib="dom" />
+
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios"
 import { Agent } from "https"
 import { Logger } from "./logger"
