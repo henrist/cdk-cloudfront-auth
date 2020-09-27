@@ -60,6 +60,10 @@ test("A simple example", () => {
     callbackUrl: `https://${distribution.distributionDomainName}${auth.callbackPath}`,
   })
 
-  expect(stack1).toMatchCdkSnapshot()
-  expect(stack2).toMatchCdkSnapshot()
+  expect(stack1).toMatchCdkSnapshot({
+    ignoreAssets: true,
+  })
+  expect(stack2).toMatchCdkSnapshot({
+    ignoreAssets: true,
+  })
 })
