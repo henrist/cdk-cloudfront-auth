@@ -1,6 +1,13 @@
 import * as cloudfront from "@aws-cdk/aws-cloudfront"
+import {
+  AddBehaviorOptions,
+  BehaviorOptions,
+  IOrigin,
+  ViewerProtocolPolicy,
+} from "@aws-cdk/aws-cloudfront"
 import * as cognito from "@aws-cdk/aws-cognito"
 import * as lambda from "@aws-cdk/aws-lambda"
+import { IVersion } from "@aws-cdk/aws-lambda"
 import * as cdk from "@aws-cdk/core"
 import { LambdaConfig } from "@henrist/cdk-lambda-config"
 import { RetrieveClientSecret } from "./client-secret"
@@ -233,6 +240,9 @@ export class CloudFrontAuth extends cdk.Construct {
    * - callback page
    * - refresh page
    * - sign out page
+   *
+   * This is to be used with CloudFrontWebDistribution. See
+   * createAuthPagesBehaviors if using Distribution.
    */
   public get authPages(): cloudfront.Behavior[] {
     return [
@@ -243,8 +253,49 @@ export class CloudFrontAuth extends cdk.Construct {
   }
 
   /**
+   * Create behaviors for authentication pages.
+   *
+   * - callback page
+   * - refresh page
+   * - sign out page
+   *
+   * This is to be used with Distribution.
+   */
+  public createAuthPagesBehaviors(
+    origin: IOrigin,
+    options?: AddBehaviorOptions,
+  ): Record<string, BehaviorOptions> {
+    function path(path: string, fn: IVersion): Record<string, BehaviorOptions> {
+      return {
+        [path]: {
+          origin,
+          forwardQueryString: true,
+          compress: true,
+          viewerProtocolPolicy: ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+          edgeLambdas: [
+            {
+              eventType: cloudfront.LambdaEdgeEventType.VIEWER_REQUEST,
+              functionVersion: fn,
+            },
+          ],
+          ...options,
+        },
+      }
+    }
+
+    return {
+      ...path(this.callbackPath, this.parseAuthFn),
+      ...path(this.refreshAuthPath, this.refreshAuthFn),
+      ...path(this.signOutPath, this.signOutFn),
+    }
+  }
+
+  /**
    * Create lambda function association for viewer request to check
    * authentication and original response to add headers.
+   *
+   * This is to be used with CloudFrontWebDistribution. See
+   * createProtectedBehavior if using Distribution.
    */
   public get authFilters(): cloudfront.LambdaFunctionAssociation[] {
     return [
@@ -257,6 +308,38 @@ export class CloudFrontAuth extends cdk.Construct {
         lambdaFunction: this.httpHeadersFn,
       },
     ]
+  }
+
+  /**
+   * Create behavior that includes authorization check.
+   *
+   * This is to be used with Distribution.
+   */
+  public createProtectedBehavior(
+    origin: IOrigin,
+    options?: AddBehaviorOptions,
+  ): BehaviorOptions {
+    if (options?.edgeLambdas != null) {
+      throw Error("User-defined edgeLambdas is currently not supported")
+    }
+
+    return {
+      origin,
+      forwardQueryString: true,
+      compress: true,
+      viewerProtocolPolicy: ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+      edgeLambdas: [
+        {
+          eventType: cloudfront.LambdaEdgeEventType.VIEWER_REQUEST,
+          functionVersion: this.checkAuthFn,
+        },
+        {
+          eventType: cloudfront.LambdaEdgeEventType.ORIGIN_RESPONSE,
+          functionVersion: this.httpHeadersFn,
+        },
+      ],
+      ...options,
+    }
   }
 
   /**
