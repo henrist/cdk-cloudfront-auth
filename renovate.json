@@ -1,5 +1,13 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["github>capraconsulting/renovate-config:library"],
   "automerge": true,
-  "automergeType": "branch"
+  "automergeType": "branch",
+  "packageRules": [
+    {
+      "description": "Create release for package updates that is part of the bundled code",
+      "packageNames": ["aws-sdk", "axios", "cookie", "jsonwebtoken", "jwks-rsa", "typescript", "webpack"],
+      "semanticCommitType": "fix"
+    }
+  ]
 }
