@@ -121,7 +121,6 @@ export class CloudFrontAuth extends cdk.Construct {
         // call performed in ClientUpdate.
         authFlows: {
           userPassword: true,
-          refreshToken: true,
           userSrp: true,
         },
         oAuth: {
