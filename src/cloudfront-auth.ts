@@ -268,7 +268,6 @@ export class CloudFrontAuth extends cdk.Construct {
       return {
         [path]: {
           origin,
-          forwardQueryString: true,
           compress: true,
           viewerProtocolPolicy: ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
           edgeLambdas: [
@@ -324,7 +323,6 @@ export class CloudFrontAuth extends cdk.Construct {
 
     return {
       origin,
-      forwardQueryString: true,
       compress: true,
       viewerProtocolPolicy: ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
       edgeLambdas: [
