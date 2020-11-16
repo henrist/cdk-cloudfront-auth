@@ -88,7 +88,7 @@ Object {
         "Create": Object {
           "action": "putParameter",
           "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-CheckAuthFunction-function-arn",
+            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn",
             "Overwrite": "TRUE:BOOLEAN",
             "Type": "String",
             "Value": Object {
@@ -96,7 +96,7 @@ Object {
             },
           },
           "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-CheckAuthFunction-function-arn",
+            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn",
           },
           "region": "eu-west-1",
           "service": "SSM",
@@ -104,10 +104,10 @@ Object {
         "Delete": Object {
           "action": "deleteParameter",
           "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-CheckAuthFunction-function-arn",
+            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn",
           },
           "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-CheckAuthFunction-function-arn",
+            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn",
           },
           "region": "eu-west-1",
           "service": "SSM",
@@ -122,7 +122,7 @@ Object {
         "Update": Object {
           "action": "putParameter",
           "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-CheckAuthFunction-function-arn",
+            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn",
             "Overwrite": "TRUE:BOOLEAN",
             "Type": "String",
             "Value": Object {
@@ -130,7 +130,7 @@ Object {
             },
           },
           "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-CheckAuthFunction-function-arn",
+            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn",
           },
           "region": "eu-west-1",
           "service": "SSM",
@@ -200,7 +200,7 @@ Object {
         "Create": Object {
           "action": "putParameter",
           "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-HttpHeadersFunction-function-arn",
+            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn",
             "Overwrite": "TRUE:BOOLEAN",
             "Type": "String",
             "Value": Object {
@@ -208,7 +208,7 @@ Object {
             },
           },
           "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-HttpHeadersFunction-function-arn",
+            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn",
           },
           "region": "eu-west-1",
           "service": "SSM",
@@ -216,10 +216,10 @@ Object {
         "Delete": Object {
           "action": "deleteParameter",
           "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-HttpHeadersFunction-function-arn",
+            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn",
           },
           "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-HttpHeadersFunction-function-arn",
+            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn",
           },
           "region": "eu-west-1",
           "service": "SSM",
@@ -234,7 +234,7 @@ Object {
         "Update": Object {
           "action": "putParameter",
           "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-HttpHeadersFunction-function-arn",
+            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn",
             "Overwrite": "TRUE:BOOLEAN",
             "Type": "String",
             "Value": Object {
@@ -242,7 +242,7 @@ Object {
             },
           },
           "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-HttpHeadersFunction-function-arn",
+            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn",
           },
           "region": "eu-west-1",
           "service": "SSM",
@@ -312,7 +312,7 @@ Object {
         "Create": Object {
           "action": "putParameter",
           "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-ParseAuthFunction-function-arn",
+            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn",
             "Overwrite": "TRUE:BOOLEAN",
             "Type": "String",
             "Value": Object {
@@ -320,7 +320,7 @@ Object {
             },
           },
           "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-ParseAuthFunction-function-arn",
+            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn",
           },
           "region": "eu-west-1",
           "service": "SSM",
@@ -328,10 +328,10 @@ Object {
         "Delete": Object {
           "action": "deleteParameter",
           "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-ParseAuthFunction-function-arn",
+            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn",
           },
           "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-ParseAuthFunction-function-arn",
+            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn",
           },
           "region": "eu-west-1",
           "service": "SSM",
@@ -346,7 +346,7 @@ Object {
         "Update": Object {
           "action": "putParameter",
           "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-ParseAuthFunction-function-arn",
+            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn",
             "Overwrite": "TRUE:BOOLEAN",
             "Type": "String",
             "Value": Object {
@@ -354,7 +354,7 @@ Object {
             },
           },
           "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-ParseAuthFunction-function-arn",
+            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn",
           },
           "region": "eu-west-1",
           "service": "SSM",
@@ -424,7 +424,7 @@ Object {
         "Create": Object {
           "action": "putParameter",
           "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-RefreshAuthFunction-function-arn",
+            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn",
             "Overwrite": "TRUE:BOOLEAN",
             "Type": "String",
             "Value": Object {
@@ -432,7 +432,7 @@ Object {
             },
           },
           "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-RefreshAuthFunction-function-arn",
+            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn",
           },
           "region": "eu-west-1",
           "service": "SSM",
@@ -440,10 +440,10 @@ Object {
         "Delete": Object {
           "action": "deleteParameter",
           "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-RefreshAuthFunction-function-arn",
+            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn",
           },
           "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-RefreshAuthFunction-function-arn",
+            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn",
           },
           "region": "eu-west-1",
           "service": "SSM",
@@ -458,7 +458,7 @@ Object {
         "Update": Object {
           "action": "putParameter",
           "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-RefreshAuthFunction-function-arn",
+            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn",
             "Overwrite": "TRUE:BOOLEAN",
             "Type": "String",
             "Value": Object {
@@ -466,7 +466,7 @@ Object {
             },
           },
           "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-RefreshAuthFunction-function-arn",
+            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn",
           },
           "region": "eu-west-1",
           "service": "SSM",
@@ -570,7 +570,7 @@ Object {
         "Create": Object {
           "action": "putParameter",
           "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-SignOutFunction-function-arn",
+            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn",
             "Overwrite": "TRUE:BOOLEAN",
             "Type": "String",
             "Value": Object {
@@ -578,7 +578,7 @@ Object {
             },
           },
           "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-SignOutFunction-function-arn",
+            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn",
           },
           "region": "eu-west-1",
           "service": "SSM",
@@ -586,10 +586,10 @@ Object {
         "Delete": Object {
           "action": "deleteParameter",
           "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-SignOutFunction-function-arn",
+            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn",
           },
           "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-SignOutFunction-function-arn",
+            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn",
           },
           "region": "eu-west-1",
           "service": "SSM",
@@ -604,7 +604,7 @@ Object {
         "Update": Object {
           "action": "putParameter",
           "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-SignOutFunction-function-arn",
+            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn",
             "Overwrite": "TRUE:BOOLEAN",
             "Type": "String",
             "Value": Object {
@@ -612,7 +612,7 @@ Object {
             },
           },
           "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/Stack1AuthLambdas3691AB43-SignOutFunction-function-arn",
+            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn",
           },
           "region": "eu-west-1",
           "service": "SSM",
@@ -757,7 +757,7 @@ Object {
           },
         },
         "FunctionArn": Object {
-          "Ref": "SsmParameterValuecfregionuseast1stackStack1Stack1AuthLambdas3691AB43CheckAuthFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
+          "Ref": "SsmParameterValuecfregionuseast1stackStack1c822e4a2b5e248e64ee706fb7d4af8c80d9b03944eCheckAuthFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
         },
         "Nonce": "",
         "ServiceToken": Object {
@@ -1117,7 +1117,7 @@ Object {
           },
         },
         "FunctionArn": Object {
-          "Ref": "SsmParameterValuecfregionuseast1stackStack1Stack1AuthLambdas3691AB43HttpHeadersFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
+          "Ref": "SsmParameterValuecfregionuseast1stackStack1c822e4a2b5e248e64ee706fb7d4af8c80d9b03944eHttpHeadersFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
         },
         "Nonce": "",
         "ServiceToken": Object {
@@ -1197,7 +1197,7 @@ Object {
           },
         },
         "FunctionArn": Object {
-          "Ref": "SsmParameterValuecfregionuseast1stackStack1Stack1AuthLambdas3691AB43ParseAuthFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
+          "Ref": "SsmParameterValuecfregionuseast1stackStack1c822e4a2b5e248e64ee706fb7d4af8c80d9b03944eParseAuthFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
         },
         "Nonce": "",
         "ServiceToken": Object {
@@ -1263,7 +1263,7 @@ Object {
           },
         },
         "FunctionArn": Object {
-          "Ref": "SsmParameterValuecfregionuseast1stackStack1Stack1AuthLambdas3691AB43RefreshAuthFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
+          "Ref": "SsmParameterValuecfregionuseast1stackStack1c822e4a2b5e248e64ee706fb7d4af8c80d9b03944eRefreshAuthFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
         },
         "Nonce": "",
         "ServiceToken": Object {
@@ -1329,7 +1329,7 @@ Object {
           },
         },
         "FunctionArn": Object {
-          "Ref": "SsmParameterValuecfregionuseast1stackStack1Stack1AuthLambdas3691AB43SignOutFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
+          "Ref": "SsmParameterValuecfregionuseast1stackStack1c822e4a2b5e248e64ee706fb7d4af8c80d9b03944eSignOutFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
         },
         "Nonce": "",
         "ServiceToken": Object {
