@@ -81,6 +81,10 @@ export class AuthLambdas extends cdk.Construct {
       role,
     })
 
+    if (this.node.addr === undefined) {
+      throw new Error("node.addr not found - ensure aws-cdk is up-to-update")
+    }
+
     return new ParameterResource<lambda.IVersion>(this, `${id}VersionParam`, {
       nonce: isSnapshot ? "snapshot" : undefined,
       parameterName: `/cf/region/${region}/stack/${stackName}/${this.node.addr}-${id}-function-arn`,
