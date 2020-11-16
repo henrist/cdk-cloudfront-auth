@@ -80,7 +80,7 @@ export class AuthLambdas extends cdk.Construct {
 
     return new ParameterResource<lambda.IVersion>(this, `${id}VersionParam`, {
       nonce: isSnapshot ? "snapshot" : undefined,
-      parameterName: `/cf/region/${region}/stack/${stackName}/${this.node.uniqueId}-${id}-function-arn`,
+      parameterName: `/cf/region/${region}/stack/${stackName}/${this.node.addr}-${id}-function-arn`,
       referenceToResource: (scope, id, reference) =>
         lambda.Version.fromVersionArn(scope, id, reference),
       regions: this.regions,
