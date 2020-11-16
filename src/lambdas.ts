@@ -71,7 +71,10 @@ export class AuthLambdas extends cdk.Construct {
     const stackName = cdk.Stack.of(this).stackName
 
     const fn = new lambda.Function(this, id, {
-      code: lambda.Code.fromAsset(path.join(__dirname, `../dist/${assetName}`)),
+      code:
+        process.env.NODE_ENV === "test"
+          ? lambda.Code.fromInline("snapshot-value")
+          : lambda.Code.fromAsset(path.join(__dirname, `../dist/${assetName}`)),
       handler: "index.handler",
       runtime: lambda.Runtime.NODEJS_12_X,
       timeout: cdk.Duration.seconds(5),
