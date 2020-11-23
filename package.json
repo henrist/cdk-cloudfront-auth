@@ -51,7 +51,7 @@
     "aws-sdk": "2.761.0",
     "axios": "0.21.0",
     "cookie": "0.4.1",
-    "eslint": "7.13.0",
+    "eslint": "7.14.0",
     "eslint-config-prettier": "6.15.0",
     "eslint-plugin-deprecation": "1.1.0",
     "eslint-plugin-prettier": "3.1.4",
