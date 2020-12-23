@@ -75,7 +75,7 @@ export async function validate(
 
   return new Promise((resolve) =>
     verify(jwtToken, jwk, verificationOptions, (err) =>
-      err ? resolve({ validationError: err }) : resolve(),
+      err ? resolve({ validationError: err }) : resolve(undefined),
     ),
   )
 }
