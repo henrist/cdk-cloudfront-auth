@@ -71,6 +71,12 @@ export interface CloudFrontAuthProps {
 export interface UpdateClientProps {
   signOutUrl: string
   callbackUrl: string
+  /**
+   * List of identity providers used for the client.
+   *
+   * @default - COGNITO and identity providers registered in the UserPool construct
+   */
+  identityProviders?: string[]
 }
 
 /**
@@ -361,9 +367,11 @@ export class CloudFrontAuth extends cdk.Construct {
       signOutUrl: props.signOutUrl,
       callbackUrl: props.callbackUrl,
       oauthScopes: this.oauthScopes,
-      identityProviders: ["COGNITO"].concat(
-        this.userPool.identityProviders.map((it) => it.providerName),
-      ),
+      identityProviders:
+        props.identityProviders ??
+        ["COGNITO"].concat(
+          this.userPool.identityProviders.map((it) => it.providerName),
+        ),
     })
   }
 }
