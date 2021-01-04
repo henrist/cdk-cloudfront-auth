@@ -1,5 +1,6 @@
 import { CloudFrontWebDistribution } from "@aws-cdk/aws-cloudfront"
 import { UserPool } from "@aws-cdk/aws-cognito"
+import { CfnVersion } from "@aws-cdk/aws-lambda"
 import { Bucket } from "@aws-cdk/aws-s3"
 import * as cdk from "@aws-cdk/core"
 import "jest-cdk-snapshot"
@@ -66,4 +67,38 @@ test("A simple example", () => {
   expect(stack2).toMatchCdkSnapshot({
     ignoreAssets: true,
   })
+})
+
+test("Auth Lambdas with nonce", () => {
+  const app = new cdk.App()
+  const stack1 = new cdk.Stack(app, "Stack1", {
+    env: {
+      account: "112233445566",
+      region: "us-east-1",
+    },
+  })
+
+  const authLambdas1 = new AuthLambdas(stack1, "AuthLambdas1", {
+    regions: ["eu-west-1"],
+  })
+
+  const authLambdas2 = new AuthLambdas(stack1, "AuthLambdas2", {
+    regions: ["eu-west-1"],
+    nonce: "2",
+  })
+
+  function getLogicalId(scope: AuthLambdas): string {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+    return stack1.resolve(
+      (scope.node
+        .findChild("ParseAuthFunction")
+        .node.findChild("CurrentVersion").node.defaultChild as CfnVersion)
+        .logicalId,
+    )
+  }
+
+  const logicalId1 = getLogicalId(authLambdas1)
+  const logicalId2 = getLogicalId(authLambdas2)
+
+  expect(logicalId1).not.toBe(logicalId2)
 })

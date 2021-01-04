@@ -12,6 +12,11 @@ interface AuthLambdasProps {
    * where the CloudFront distribution is deployed (the CloudFormation stack).
    */
   regions: string[]
+  /**
+   * A nonce value that can be used to force new lambda functions
+   * to allow new versions to be created.
+   */
+  nonce?: string
 }
 
 /**
@@ -28,12 +33,15 @@ export class AuthLambdas extends cdk.Construct {
   public readonly signOutFn: ParameterResource<lambda.IVersion>
 
   private readonly regions: string[]
+  private readonly nonce: string | undefined
 
   constructor(scope: cdk.Construct, id: string, props: AuthLambdasProps) {
     super(scope, id)
 
     const region = cdk.Stack.of(this).region
     this.regions = props.regions
+
+    this.nonce = props.nonce
 
     if (region !== "us-east-1") {
       throw new Error("Region must be us-east-1 due to Lambda@edge")
@@ -79,6 +87,13 @@ export class AuthLambdas extends cdk.Construct {
       runtime: lambda.Runtime.NODEJS_12_X,
       timeout: cdk.Duration.seconds(5),
       role,
+      environment:
+        this.nonce == null
+          ? undefined
+          : {
+              // Not used by the lambda, only for causing updated resource.
+              _NONCE: this.nonce,
+            },
     })
 
     if (this.node.addr === undefined) {
