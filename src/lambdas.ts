@@ -87,13 +87,8 @@ export class AuthLambdas extends cdk.Construct {
       runtime: lambda.Runtime.NODEJS_12_X,
       timeout: cdk.Duration.seconds(5),
       role,
-      environment:
-        this.nonce == null
-          ? undefined
-          : {
-              // Not used by the lambda, only for causing updated resource.
-              _NONCE: this.nonce,
-            },
+      description:
+        this.nonce == null ? undefined : `Nonce value: ${this.nonce}`,
     })
 
     if (this.node.addr === undefined) {

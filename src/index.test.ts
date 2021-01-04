@@ -70,26 +70,33 @@ test("A simple example", () => {
 })
 
 test("Auth Lambdas with nonce", () => {
-  const app = new cdk.App()
-  const stack1 = new cdk.Stack(app, "Stack1", {
+  const app1 = new cdk.App()
+  const app2 = new cdk.App()
+  const stack1 = new cdk.Stack(app1, "Stack", {
+    env: {
+      account: "112233445566",
+      region: "us-east-1",
+    },
+  })
+  const stack2 = new cdk.Stack(app2, "Stack", {
     env: {
       account: "112233445566",
       region: "us-east-1",
     },
   })
 
-  const authLambdas1 = new AuthLambdas(stack1, "AuthLambdas1", {
+  const authLambdas1 = new AuthLambdas(stack1, "AuthLambdas", {
     regions: ["eu-west-1"],
   })
 
-  const authLambdas2 = new AuthLambdas(stack1, "AuthLambdas2", {
+  const authLambdas2 = new AuthLambdas(stack2, "AuthLambdas", {
     regions: ["eu-west-1"],
     nonce: "2",
   })
 
   function getLogicalId(scope: AuthLambdas): string {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-    return stack1.resolve(
+    return cdk.Stack.of(scope).resolve(
       (scope.node
         .findChild("ParseAuthFunction")
         .node.findChild("CurrentVersion").node.defaultChild as CfnVersion)
