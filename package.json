@@ -63,7 +63,7 @@
     "jwks-rsa": "1.12.2",
     "prettier": "2.2.1",
     "rimraf": "3.0.2",
-    "semantic-release": "17.3.7",
+    "semantic-release": "17.3.8",
     "ts-jest": "26.5.0",
     "ts-loader": "8.0.15",
     "ts-node": "9.1.1",
