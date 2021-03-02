@@ -1502,6 +1502,7 @@ Object {
       "Type": "AWS::CloudFront::Distribution",
     },
     "UserPool6BA7E5F2": Object {
+      "DeletionPolicy": "Retain",
       "Properties": Object {
         "AccountRecoverySetting": Object {
           "RecoveryMechanisms": Array [
@@ -1529,6 +1530,7 @@ Object {
         },
       },
       "Type": "AWS::Cognito::UserPool",
+      "UpdateReplacePolicy": "Retain",
     },
     "UserPoolUserPoolClient40176907": Object {
       "Properties": Object {
