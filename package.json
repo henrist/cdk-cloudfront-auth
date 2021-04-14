@@ -12,7 +12,7 @@
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "prepare": "npm run build",
+    "prepare": "npm run build && husky install",
     "semantic-release": "semantic-release"
   },
   "keywords": [
@@ -74,11 +74,6 @@
   "dependencies": {
     "@henrist/cdk-cross-region-params": "^1.0.0",
     "@henrist/cdk-lambda-config": "^1.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   },
   "peerDependencies": {
     "@aws-cdk/aws-cloudfront": "^1.72.0",
