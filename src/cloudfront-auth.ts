@@ -172,7 +172,7 @@ export class CloudFrontAuth extends cdk.Construct {
       signOutRedirectTo: this.signOutRedirectTo,
       signOutPath: this.signOutPath,
       refreshAuthPath: this.refreshAuthPath,
-      requireGroupAnyOf: props.requireGroupAnyOf ?? null,
+      requireGroupAnyOf: props.requireGroupAnyOf,
       cookieSettings: {
         /*
         spaMode - consider if this should be supported

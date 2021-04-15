@@ -19,7 +19,7 @@ export interface StoredConfig {
   clientSecret: string
   nonceSigningSecret: string
   logLevel: keyof typeof LogLevel
-  requireGroupAnyOf: string[] | null
+  requireGroupAnyOf?: string[] | null
 }
 
 export interface Config extends StoredConfig {

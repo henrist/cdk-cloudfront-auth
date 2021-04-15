@@ -749,7 +749,6 @@ Object {
             "aws.cognito.signin.user.admin",
           ],
           "refreshAuthPath": "/auth/refresh",
-          "requireGroupAnyOf": null,
           "signOutPath": "/auth/sign-out",
           "signOutRedirectTo": "/",
           "userPoolId": Object {
@@ -1109,7 +1108,6 @@ Object {
             "aws.cognito.signin.user.admin",
           ],
           "refreshAuthPath": "/auth/refresh",
-          "requireGroupAnyOf": null,
           "signOutPath": "/auth/sign-out",
           "signOutRedirectTo": "/",
           "userPoolId": Object {
@@ -1189,7 +1187,6 @@ Object {
             "aws.cognito.signin.user.admin",
           ],
           "refreshAuthPath": "/auth/refresh",
-          "requireGroupAnyOf": null,
           "signOutPath": "/auth/sign-out",
           "signOutRedirectTo": "/",
           "userPoolId": Object {
@@ -1255,7 +1252,6 @@ Object {
             "aws.cognito.signin.user.admin",
           ],
           "refreshAuthPath": "/auth/refresh",
-          "requireGroupAnyOf": null,
           "signOutPath": "/auth/sign-out",
           "signOutRedirectTo": "/",
           "userPoolId": Object {
@@ -1321,7 +1317,6 @@ Object {
             "aws.cognito.signin.user.admin",
           ],
           "refreshAuthPath": "/auth/refresh",
-          "requireGroupAnyOf": null,
           "signOutPath": "/auth/sign-out",
           "signOutRedirectTo": "/",
           "userPoolId": Object {
