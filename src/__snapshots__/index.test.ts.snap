@@ -86,32 +86,18 @@ Object {
       ],
       "Properties": Object {
         "Create": Object {
-          "action": "putParameter",
-          "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn",
-            "Overwrite": "TRUE:BOOLEAN",
-            "Type": "String",
-            "Value": Object {
-              "Ref": "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D62f05b4ed1e6aba71da969adef01c7a540",
-            },
-          },
-          "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn",
-          },
-          "region": "eu-west-1",
-          "service": "SSM",
+          "Fn::Join": Array [
+            "",
+            Array [
+              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn\\",\\"Value\\":\\"",
+              Object {
+                "Ref": "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D62f05b4ed1e6aba71da969adef01c7a540",
+              },
+              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn\\"}}",
+            ],
+          ],
         },
-        "Delete": Object {
-          "action": "deleteParameter",
-          "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn",
-          },
-          "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn",
-          },
-          "region": "eu-west-1",
-          "service": "SSM",
-        },
+        "Delete": "{\\"service\\":\\"SSM\\",\\"action\\":\\"deleteParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn\\"},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn\\"}}",
         "InstallLatestAwsSdk": true,
         "ServiceToken": Object {
           "Fn::GetAtt": Array [
@@ -120,20 +106,16 @@ Object {
           ],
         },
         "Update": Object {
-          "action": "putParameter",
-          "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn",
-            "Overwrite": "TRUE:BOOLEAN",
-            "Type": "String",
-            "Value": Object {
-              "Ref": "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D62f05b4ed1e6aba71da969adef01c7a540",
-            },
-          },
-          "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn",
-          },
-          "region": "eu-west-1",
-          "service": "SSM",
+          "Fn::Join": Array [
+            "",
+            Array [
+              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn\\",\\"Value\\":\\"",
+              Object {
+                "Ref": "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D62f05b4ed1e6aba71da969adef01c7a540",
+              },
+              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn\\"}}",
+            ],
+          ],
         },
       },
       "Type": "Custom::AWS",
@@ -198,32 +180,18 @@ Object {
       ],
       "Properties": Object {
         "Create": Object {
-          "action": "putParameter",
-          "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn",
-            "Overwrite": "TRUE:BOOLEAN",
-            "Type": "String",
-            "Value": Object {
-              "Ref": "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2Eb2c84f6f63b0f6c8462381eff93a754e",
-            },
-          },
-          "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn",
-          },
-          "region": "eu-west-1",
-          "service": "SSM",
+          "Fn::Join": Array [
+            "",
+            Array [
+              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn\\",\\"Value\\":\\"",
+              Object {
+                "Ref": "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2Eb2c84f6f63b0f6c8462381eff93a754e",
+              },
+              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn\\"}}",
+            ],
+          ],
         },
-        "Delete": Object {
-          "action": "deleteParameter",
-          "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn",
-          },
-          "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn",
-          },
-          "region": "eu-west-1",
-          "service": "SSM",
-        },
+        "Delete": "{\\"service\\":\\"SSM\\",\\"action\\":\\"deleteParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn\\"},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn\\"}}",
         "InstallLatestAwsSdk": true,
         "ServiceToken": Object {
           "Fn::GetAtt": Array [
@@ -232,20 +200,16 @@ Object {
           ],
         },
         "Update": Object {
-          "action": "putParameter",
-          "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn",
-            "Overwrite": "TRUE:BOOLEAN",
-            "Type": "String",
-            "Value": Object {
-              "Ref": "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2Eb2c84f6f63b0f6c8462381eff93a754e",
-            },
-          },
-          "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn",
-          },
-          "region": "eu-west-1",
-          "service": "SSM",
+          "Fn::Join": Array [
+            "",
+            Array [
+              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn\\",\\"Value\\":\\"",
+              Object {
+                "Ref": "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2Eb2c84f6f63b0f6c8462381eff93a754e",
+              },
+              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn\\"}}",
+            ],
+          ],
         },
       },
       "Type": "Custom::AWS",
@@ -310,32 +274,18 @@ Object {
       ],
       "Properties": Object {
         "Create": Object {
-          "action": "putParameter",
-          "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn",
-            "Overwrite": "TRUE:BOOLEAN",
-            "Type": "String",
-            "Value": Object {
-              "Ref": "AuthLambdasParseAuthFunctionCurrentVersionA32A5991157d1b5fb867f31e43d00b62d727716e",
-            },
-          },
-          "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn",
-          },
-          "region": "eu-west-1",
-          "service": "SSM",
+          "Fn::Join": Array [
+            "",
+            Array [
+              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn\\",\\"Value\\":\\"",
+              Object {
+                "Ref": "AuthLambdasParseAuthFunctionCurrentVersionA32A5991157d1b5fb867f31e43d00b62d727716e",
+              },
+              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn\\"}}",
+            ],
+          ],
         },
-        "Delete": Object {
-          "action": "deleteParameter",
-          "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn",
-          },
-          "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn",
-          },
-          "region": "eu-west-1",
-          "service": "SSM",
-        },
+        "Delete": "{\\"service\\":\\"SSM\\",\\"action\\":\\"deleteParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn\\"},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn\\"}}",
         "InstallLatestAwsSdk": true,
         "ServiceToken": Object {
           "Fn::GetAtt": Array [
@@ -344,20 +294,16 @@ Object {
           ],
         },
         "Update": Object {
-          "action": "putParameter",
-          "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn",
-            "Overwrite": "TRUE:BOOLEAN",
-            "Type": "String",
-            "Value": Object {
-              "Ref": "AuthLambdasParseAuthFunctionCurrentVersionA32A5991157d1b5fb867f31e43d00b62d727716e",
-            },
-          },
-          "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn",
-          },
-          "region": "eu-west-1",
-          "service": "SSM",
+          "Fn::Join": Array [
+            "",
+            Array [
+              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn\\",\\"Value\\":\\"",
+              Object {
+                "Ref": "AuthLambdasParseAuthFunctionCurrentVersionA32A5991157d1b5fb867f31e43d00b62d727716e",
+              },
+              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn\\"}}",
+            ],
+          ],
         },
       },
       "Type": "Custom::AWS",
@@ -422,32 +368,18 @@ Object {
       ],
       "Properties": Object {
         "Create": Object {
-          "action": "putParameter",
-          "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn",
-            "Overwrite": "TRUE:BOOLEAN",
-            "Type": "String",
-            "Value": Object {
-              "Ref": "AuthLambdasRefreshAuthFunctionCurrentVersion632285F636bad2788afb91dfe580237aee95c1c0",
-            },
-          },
-          "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn",
-          },
-          "region": "eu-west-1",
-          "service": "SSM",
+          "Fn::Join": Array [
+            "",
+            Array [
+              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn\\",\\"Value\\":\\"",
+              Object {
+                "Ref": "AuthLambdasRefreshAuthFunctionCurrentVersion632285F636bad2788afb91dfe580237aee95c1c0",
+              },
+              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn\\"}}",
+            ],
+          ],
         },
-        "Delete": Object {
-          "action": "deleteParameter",
-          "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn",
-          },
-          "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn",
-          },
-          "region": "eu-west-1",
-          "service": "SSM",
-        },
+        "Delete": "{\\"service\\":\\"SSM\\",\\"action\\":\\"deleteParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn\\"},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn\\"}}",
         "InstallLatestAwsSdk": true,
         "ServiceToken": Object {
           "Fn::GetAtt": Array [
@@ -456,20 +388,16 @@ Object {
           ],
         },
         "Update": Object {
-          "action": "putParameter",
-          "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn",
-            "Overwrite": "TRUE:BOOLEAN",
-            "Type": "String",
-            "Value": Object {
-              "Ref": "AuthLambdasRefreshAuthFunctionCurrentVersion632285F636bad2788afb91dfe580237aee95c1c0",
-            },
-          },
-          "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn",
-          },
-          "region": "eu-west-1",
-          "service": "SSM",
+          "Fn::Join": Array [
+            "",
+            Array [
+              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn\\",\\"Value\\":\\"",
+              Object {
+                "Ref": "AuthLambdasRefreshAuthFunctionCurrentVersion632285F636bad2788afb91dfe580237aee95c1c0",
+              },
+              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn\\"}}",
+            ],
+          ],
         },
       },
       "Type": "Custom::AWS",
@@ -568,32 +496,18 @@ Object {
       ],
       "Properties": Object {
         "Create": Object {
-          "action": "putParameter",
-          "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn",
-            "Overwrite": "TRUE:BOOLEAN",
-            "Type": "String",
-            "Value": Object {
-              "Ref": "AuthLambdasSignOutFunctionCurrentVersion0576BBB197de9e61780d3845db16f62e6950d7d2",
-            },
-          },
-          "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn",
-          },
-          "region": "eu-west-1",
-          "service": "SSM",
+          "Fn::Join": Array [
+            "",
+            Array [
+              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn\\",\\"Value\\":\\"",
+              Object {
+                "Ref": "AuthLambdasSignOutFunctionCurrentVersion0576BBB197de9e61780d3845db16f62e6950d7d2",
+              },
+              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn\\"}}",
+            ],
+          ],
         },
-        "Delete": Object {
-          "action": "deleteParameter",
-          "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn",
-          },
-          "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn",
-          },
-          "region": "eu-west-1",
-          "service": "SSM",
-        },
+        "Delete": "{\\"service\\":\\"SSM\\",\\"action\\":\\"deleteParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn\\"},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn\\"}}",
         "InstallLatestAwsSdk": true,
         "ServiceToken": Object {
           "Fn::GetAtt": Array [
@@ -602,20 +516,16 @@ Object {
           ],
         },
         "Update": Object {
-          "action": "putParameter",
-          "parameters": Object {
-            "Name": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn",
-            "Overwrite": "TRUE:BOOLEAN",
-            "Type": "String",
-            "Value": Object {
-              "Ref": "AuthLambdasSignOutFunctionCurrentVersion0576BBB197de9e61780d3845db16f62e6950d7d2",
-            },
-          },
-          "physicalResourceId": Object {
-            "id": "/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn",
-          },
-          "region": "eu-west-1",
-          "service": "SSM",
+          "Fn::Join": Array [
+            "",
+            Array [
+              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn\\",\\"Value\\":\\"",
+              Object {
+                "Ref": "AuthLambdasSignOutFunctionCurrentVersion0576BBB197de9e61780d3845db16f62e6950d7d2",
+              },
+              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn\\"}}",
+            ],
+          ],
         },
       },
       "Type": "Custom::AWS",
@@ -776,32 +686,28 @@ Object {
       ],
       "Properties": Object {
         "Create": Object {
-          "action": "describeUserPoolClient",
-          "parameters": Object {
-            "ClientId": Object {
-              "Ref": "UserPoolUserPoolClient40176907",
-            },
-            "UserPoolId": Object {
-              "Ref": "UserPool6BA7E5F2",
-            },
-          },
-          "physicalResourceId": Object {
-            "id": Object {
-              "Fn::Join": Array [
-                "",
-                Array [
-                  Object {
-                    "Ref": "UserPool6BA7E5F2",
-                  },
-                  "-",
-                  Object {
-                    "Ref": "UserPoolUserPoolClient40176907",
-                  },
-                ],
-              ],
-            },
-          },
-          "service": "CognitoIdentityServiceProvider",
+          "Fn::Join": Array [
+            "",
+            Array [
+              "{\\"service\\":\\"CognitoIdentityServiceProvider\\",\\"action\\":\\"describeUserPoolClient\\",\\"parameters\\":{\\"UserPoolId\\":\\"",
+              Object {
+                "Ref": "UserPool6BA7E5F2",
+              },
+              "\\",\\"ClientId\\":\\"",
+              Object {
+                "Ref": "UserPoolUserPoolClient40176907",
+              },
+              "\\"},\\"physicalResourceId\\":{\\"id\\":\\"",
+              Object {
+                "Ref": "UserPool6BA7E5F2",
+              },
+              "-",
+              Object {
+                "Ref": "UserPoolUserPoolClient40176907",
+              },
+              "\\"}}",
+            ],
+          ],
         },
         "InstallLatestAwsSdk": true,
         "ServiceToken": Object {
@@ -811,32 +717,28 @@ Object {
           ],
         },
         "Update": Object {
-          "action": "describeUserPoolClient",
-          "parameters": Object {
-            "ClientId": Object {
-              "Ref": "UserPoolUserPoolClient40176907",
-            },
-            "UserPoolId": Object {
-              "Ref": "UserPool6BA7E5F2",
-            },
-          },
-          "physicalResourceId": Object {
-            "id": Object {
-              "Fn::Join": Array [
-                "",
-                Array [
-                  Object {
-                    "Ref": "UserPool6BA7E5F2",
-                  },
-                  "-",
-                  Object {
-                    "Ref": "UserPoolUserPoolClient40176907",
-                  },
-                ],
-              ],
-            },
-          },
-          "service": "CognitoIdentityServiceProvider",
+          "Fn::Join": Array [
+            "",
+            Array [
+              "{\\"service\\":\\"CognitoIdentityServiceProvider\\",\\"action\\":\\"describeUserPoolClient\\",\\"parameters\\":{\\"UserPoolId\\":\\"",
+              Object {
+                "Ref": "UserPool6BA7E5F2",
+              },
+              "\\",\\"ClientId\\":\\"",
+              Object {
+                "Ref": "UserPoolUserPoolClient40176907",
+              },
+              "\\"},\\"physicalResourceId\\":{\\"id\\":\\"",
+              Object {
+                "Ref": "UserPool6BA7E5F2",
+              },
+              "-",
+              Object {
+                "Ref": "UserPoolUserPoolClient40176907",
+              },
+              "\\"}}",
+            ],
+          ],
         },
       },
       "Type": "Custom::AWS",
@@ -875,80 +777,42 @@ Object {
       ],
       "Properties": Object {
         "Create": Object {
-          "action": "updateUserPoolClient",
-          "parameters": Object {
-            "AllowedOAuthFlows": Array [
-              "code",
-            ],
-            "AllowedOAuthFlowsUserPoolClient": "TRUE:BOOLEAN",
-            "AllowedOAuthScopes": Array [
-              "phone",
-              "email",
-              "profile",
-              "openid",
-              "aws.cognito.signin.user.admin",
-            ],
-            "CallbackURLs": Array [
+          "Fn::Join": Array [
+            "",
+            Array [
+              "{\\"service\\":\\"CognitoIdentityServiceProvider\\",\\"action\\":\\"updateUserPoolClient\\",\\"parameters\\":{\\"AllowedOAuthFlows\\":[\\"code\\"],\\"AllowedOAuthFlowsUserPoolClient\\":true,\\"SupportedIdentityProviders\\":[\\"COGNITO\\"],\\"AllowedOAuthScopes\\":[\\"phone\\",\\"email\\",\\"profile\\",\\"openid\\",\\"aws.cognito.signin.user.admin\\"],\\"ClientId\\":\\"",
               Object {
-                "Fn::Join": Array [
-                  "",
-                  Array [
-                    "https://",
-                    Object {
-                      "Fn::GetAtt": Array [
-                        "CloudFrontDistributionCFDistribution599ADCC4",
-                        "DomainName",
-                      ],
-                    },
-                    "/auth/callback",
-                  ],
+                "Ref": "UserPoolUserPoolClient40176907",
+              },
+              "\\",\\"CallbackURLs\\":[\\"https://",
+              Object {
+                "Fn::GetAtt": Array [
+                  "CloudFrontDistributionCFDistribution599ADCC4",
+                  "DomainName",
                 ],
               },
-            ],
-            "ClientId": Object {
-              "Ref": "UserPoolUserPoolClient40176907",
-            },
-            "LogoutURLs": Array [
+              "/auth/callback\\"],\\"LogoutURLs\\":[\\"https://",
               Object {
-                "Fn::Join": Array [
-                  "",
-                  Array [
-                    "https://",
-                    Object {
-                      "Fn::GetAtt": Array [
-                        "CloudFrontDistributionCFDistribution599ADCC4",
-                        "DomainName",
-                      ],
-                    },
-                    "/",
-                  ],
+                "Fn::GetAtt": Array [
+                  "CloudFrontDistributionCFDistribution599ADCC4",
+                  "DomainName",
                 ],
               },
+              "/\\"],\\"UserPoolId\\":\\"",
+              Object {
+                "Ref": "UserPool6BA7E5F2",
+              },
+              "\\"},\\"physicalResourceId\\":{\\"id\\":\\"",
+              Object {
+                "Ref": "UserPool6BA7E5F2",
+              },
+              "-",
+              Object {
+                "Ref": "UserPoolUserPoolClient40176907",
+              },
+              "\\"}}",
             ],
-            "SupportedIdentityProviders": Array [
-              "COGNITO",
-            ],
-            "UserPoolId": Object {
-              "Ref": "UserPool6BA7E5F2",
-            },
-          },
-          "physicalResourceId": Object {
-            "id": Object {
-              "Fn::Join": Array [
-                "",
-                Array [
-                  Object {
-                    "Ref": "UserPool6BA7E5F2",
-                  },
-                  "-",
-                  Object {
-                    "Ref": "UserPoolUserPoolClient40176907",
-                  },
-                ],
-              ],
-            },
-          },
-          "service": "CognitoIdentityServiceProvider",
+          ],
         },
         "InstallLatestAwsSdk": true,
         "ServiceToken": Object {
@@ -958,80 +822,42 @@ Object {
           ],
         },
         "Update": Object {
-          "action": "updateUserPoolClient",
-          "parameters": Object {
-            "AllowedOAuthFlows": Array [
-              "code",
-            ],
-            "AllowedOAuthFlowsUserPoolClient": "TRUE:BOOLEAN",
-            "AllowedOAuthScopes": Array [
-              "phone",
-              "email",
-              "profile",
-              "openid",
-              "aws.cognito.signin.user.admin",
-            ],
-            "CallbackURLs": Array [
+          "Fn::Join": Array [
+            "",
+            Array [
+              "{\\"service\\":\\"CognitoIdentityServiceProvider\\",\\"action\\":\\"updateUserPoolClient\\",\\"parameters\\":{\\"AllowedOAuthFlows\\":[\\"code\\"],\\"AllowedOAuthFlowsUserPoolClient\\":true,\\"SupportedIdentityProviders\\":[\\"COGNITO\\"],\\"AllowedOAuthScopes\\":[\\"phone\\",\\"email\\",\\"profile\\",\\"openid\\",\\"aws.cognito.signin.user.admin\\"],\\"ClientId\\":\\"",
               Object {
-                "Fn::Join": Array [
-                  "",
-                  Array [
-                    "https://",
-                    Object {
-                      "Fn::GetAtt": Array [
-                        "CloudFrontDistributionCFDistribution599ADCC4",
-                        "DomainName",
-                      ],
-                    },
-                    "/auth/callback",
-                  ],
+                "Ref": "UserPoolUserPoolClient40176907",
+              },
+              "\\",\\"CallbackURLs\\":[\\"https://",
+              Object {
+                "Fn::GetAtt": Array [
+                  "CloudFrontDistributionCFDistribution599ADCC4",
+                  "DomainName",
                 ],
               },
-            ],
-            "ClientId": Object {
-              "Ref": "UserPoolUserPoolClient40176907",
-            },
-            "LogoutURLs": Array [
+              "/auth/callback\\"],\\"LogoutURLs\\":[\\"https://",
               Object {
-                "Fn::Join": Array [
-                  "",
-                  Array [
-                    "https://",
-                    Object {
-                      "Fn::GetAtt": Array [
-                        "CloudFrontDistributionCFDistribution599ADCC4",
-                        "DomainName",
-                      ],
-                    },
-                    "/",
-                  ],
+                "Fn::GetAtt": Array [
+                  "CloudFrontDistributionCFDistribution599ADCC4",
+                  "DomainName",
                 ],
               },
+              "/\\"],\\"UserPoolId\\":\\"",
+              Object {
+                "Ref": "UserPool6BA7E5F2",
+              },
+              "\\"},\\"physicalResourceId\\":{\\"id\\":\\"",
+              Object {
+                "Ref": "UserPool6BA7E5F2",
+              },
+              "-",
+              Object {
+                "Ref": "UserPoolUserPoolClient40176907",
+              },
+              "\\"}}",
             ],
-            "SupportedIdentityProviders": Array [
-              "COGNITO",
-            ],
-            "UserPoolId": Object {
-              "Ref": "UserPool6BA7E5F2",
-            },
-          },
-          "physicalResourceId": Object {
-            "id": Object {
-              "Fn::Join": Array [
-                "",
-                Array [
-                  Object {
-                    "Ref": "UserPool6BA7E5F2",
-                  },
-                  "-",
-                  Object {
-                    "Ref": "UserPoolUserPoolClient40176907",
-                  },
-                ],
-              ],
-            },
-          },
-          "service": "CognitoIdentityServiceProvider",
+          ],
         },
       },
       "Type": "Custom::AWS",
@@ -1632,7 +1458,7 @@ Object {
             "Arn",
           ],
         },
-        "Runtime": "nodejs10.x",
+        "Runtime": "nodejs14.x",
         "Timeout": 900,
       },
       "Type": "AWS::Lambda::Function",
@@ -1719,7 +1545,7 @@ Object {
             "Arn",
           ],
         },
-        "Runtime": "nodejs10.x",
+        "Runtime": "nodejs14.x",
         "Timeout": 900,
       },
       "Type": "AWS::Lambda::Function",
