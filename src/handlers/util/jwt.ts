@@ -34,13 +34,8 @@ async function getSigningKey(
   if (!jwksRsa) {
     jwksRsa = jwksClient({ cache: true, rateLimit: true, jwksUri })
   }
-  return new Promise((resolve) =>
-    jwksRsa.getSigningKey(kid, (err, jwk) =>
-      err
-        ? resolve(err)
-        : resolve(isRsaSigningKey(jwk) ? jwk.rsaPublicKey : jwk.publicKey),
-    ),
-  )
+  const jwk = await jwksRsa.getSigningKey(kid)
+  return isRsaSigningKey(jwk) ? jwk.rsaPublicKey : jwk.publicKey
 }
 
 export async function validate(
