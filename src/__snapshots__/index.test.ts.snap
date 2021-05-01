@@ -665,9 +665,7 @@ Object {
             "Ref": "UserPool6BA7E5F2",
           },
         },
-        "FunctionArn": Object {
-          "Ref": "SsmParameterValuecfregionuseast1stackStack1c822e4a2b5e248e64ee706fb7d4af8c80d9b03944eCheckAuthFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
-        },
+        "FunctionArn": "{{resolve:ssm:/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn}}",
         "Nonce": "",
         "ServiceToken": Object {
           "Fn::GetAtt": Array [
@@ -940,9 +938,7 @@ Object {
             "Ref": "UserPool6BA7E5F2",
           },
         },
-        "FunctionArn": Object {
-          "Ref": "SsmParameterValuecfregionuseast1stackStack1c822e4a2b5e248e64ee706fb7d4af8c80d9b03944eHttpHeadersFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
-        },
+        "FunctionArn": "{{resolve:ssm:/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn}}",
         "Nonce": "",
         "ServiceToken": Object {
           "Fn::GetAtt": Array [
@@ -1019,9 +1015,7 @@ Object {
             "Ref": "UserPool6BA7E5F2",
           },
         },
-        "FunctionArn": Object {
-          "Ref": "SsmParameterValuecfregionuseast1stackStack1c822e4a2b5e248e64ee706fb7d4af8c80d9b03944eParseAuthFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
-        },
+        "FunctionArn": "{{resolve:ssm:/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn}}",
         "Nonce": "",
         "ServiceToken": Object {
           "Fn::GetAtt": Array [
@@ -1084,9 +1078,7 @@ Object {
             "Ref": "UserPool6BA7E5F2",
           },
         },
-        "FunctionArn": Object {
-          "Ref": "SsmParameterValuecfregionuseast1stackStack1c822e4a2b5e248e64ee706fb7d4af8c80d9b03944eRefreshAuthFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
-        },
+        "FunctionArn": "{{resolve:ssm:/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn}}",
         "Nonce": "",
         "ServiceToken": Object {
           "Fn::GetAtt": Array [
@@ -1149,9 +1141,7 @@ Object {
             "Ref": "UserPool6BA7E5F2",
           },
         },
-        "FunctionArn": Object {
-          "Ref": "SsmParameterValuecfregionuseast1stackStack1c822e4a2b5e248e64ee706fb7d4af8c80d9b03944eSignOutFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
-        },
+        "FunctionArn": "{{resolve:ssm:/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn}}",
         "Nonce": "",
         "ServiceToken": Object {
           "Fn::GetAtt": Array [
