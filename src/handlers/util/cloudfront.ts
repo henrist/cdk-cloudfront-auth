@@ -94,7 +94,7 @@ function createErrorHtml(props: {
 }
 
 function addCloudFrontHeaders<
-  T extends CloudFrontRequestResult | CloudFrontResponseResult
+  T extends CloudFrontRequestResult | CloudFrontResponseResult,
 >(config: Config, response: T): T {
   if (!response) {
     throw new Error("Expected response value")

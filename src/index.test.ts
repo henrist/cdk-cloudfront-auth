@@ -97,10 +97,11 @@ test("Auth Lambdas with nonce", () => {
   function getLogicalId(scope: AuthLambdas): string {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return cdk.Stack.of(scope).resolve(
-      (scope.node
-        .findChild("ParseAuthFunction")
-        .node.findChild("CurrentVersion").node.defaultChild as CfnVersion)
-        .logicalId,
+      (
+        scope.node
+          .findChild("ParseAuthFunction")
+          .node.findChild("CurrentVersion").node.defaultChild as CfnVersion
+      ).logicalId,
     )
   }
 
