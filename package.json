@@ -69,7 +69,7 @@
     "ts-node": "10.2.0",
     "typescript": "4.3.5",
     "webpack": "5.50.0",
-    "webpack-cli": "4.7.2"
+    "webpack-cli": "4.8.0"
   },
   "dependencies": {
     "@henrist/cdk-cross-region-params": "^1.0.0",
