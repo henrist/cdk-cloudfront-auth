@@ -41,7 +41,7 @@
     "@aws-cdk/custom-resources": "1.125.0",
     "@commitlint/cli": "12.1.4",
     "@commitlint/config-conventional": "12.1.4",
-    "@types/aws-lambda": "8.10.84",
+    "@types/aws-lambda": "8.10.85",
     "@types/cookie": "0.4.1",
     "@types/jest": "26.0.24",
     "@types/jsonwebtoken": "8.5.5",
