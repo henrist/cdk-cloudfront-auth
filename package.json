@@ -73,7 +73,7 @@
   },
   "dependencies": {
     "@henrist/cdk-cross-region-params": "^1.0.0",
-    "@henrist/cdk-lambda-config": "^1.0.0"
+    "@henrist/cdk-lambda-config": "^2.0.0"
   },
   "peerDependencies": {
     "@aws-cdk/aws-cloudfront": "^1.72.0",
