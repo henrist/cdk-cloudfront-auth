@@ -31,7 +31,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "1.125.0",
+    "@aws-cdk/assert": "2.1.0",
     "@aws-cdk/aws-cloudfront": "1.125.0",
     "@aws-cdk/aws-cognito": "1.125.0",
     "@aws-cdk/aws-iam": "1.125.0",
