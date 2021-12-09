@@ -1,7 +1,8 @@
-import * as lambda from "@aws-cdk/aws-lambda"
-import * as cdk from "@aws-cdk/core"
-import * as cr from "@aws-cdk/custom-resources"
+import * as lambda from "aws-cdk-lib/aws-lambda"
+import * as cr from "aws-cdk-lib/custom-resources"
 import * as path from "path"
+import { Construct } from "constructs"
+import { CustomResource, Stack } from "aws-cdk-lib"
 
 interface GenerateSecretProps {
   /**
@@ -13,13 +14,13 @@ interface GenerateSecretProps {
 /**
  * Generate a secret to be used in other parts of the deployment.
  */
-export class GenerateSecret extends cdk.Construct {
+export class GenerateSecret extends Construct {
   public readonly value: string
 
-  constructor(scope: cdk.Construct, id: string, props?: GenerateSecretProps) {
+  constructor(scope: Construct, id: string, props?: GenerateSecretProps) {
     super(scope, id)
 
-    const resource = new cdk.CustomResource(this, "Resource", {
+    const resource = new CustomResource(this, "Resource", {
       serviceToken: GenerateSecretProvider.getOrCreate(this).serviceToken,
       properties: {
         Nonce: props?.nonce ?? "",
@@ -30,12 +31,12 @@ export class GenerateSecret extends cdk.Construct {
   }
 }
 
-class GenerateSecretProvider extends cdk.Construct {
+class GenerateSecretProvider extends Construct {
   /**
    * Returns the singleton provider.
    */
-  public static getOrCreate(scope: cdk.Construct) {
-    const stack = cdk.Stack.of(scope)
+  public static getOrCreate(scope: Construct) {
+    const stack = Stack.of(scope)
     const id = "henrist.cloudfront-auth.generate-secret.provider"
     return (
       (stack.node.tryFindChild(id) as GenerateSecretProvider) ||
@@ -46,7 +47,7 @@ class GenerateSecretProvider extends cdk.Construct {
   private readonly provider: cr.Provider
   public readonly serviceToken: string
 
-  constructor(scope: cdk.Construct, id: string) {
+  constructor(scope: Construct, id: string) {
     super(scope, id)
 
     this.provider = new cr.Provider(this, "Provider", {

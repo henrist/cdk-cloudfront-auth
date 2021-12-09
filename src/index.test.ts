@@ -1,20 +1,20 @@
-import { CloudFrontWebDistribution } from "@aws-cdk/aws-cloudfront"
-import { UserPool } from "@aws-cdk/aws-cognito"
-import { CfnVersion } from "@aws-cdk/aws-lambda"
-import { Bucket } from "@aws-cdk/aws-s3"
-import * as cdk from "@aws-cdk/core"
+import { CloudFrontWebDistribution } from "aws-cdk-lib/aws-cloudfront"
+import { UserPool } from "aws-cdk-lib/aws-cognito"
+import { CfnVersion } from "aws-cdk-lib/aws-lambda"
+import { Bucket } from "aws-cdk-lib/aws-s3"
 import "jest-cdk-snapshot"
 import { AuthLambdas, CloudFrontAuth } from "."
+import { App, Stack } from "aws-cdk-lib"
 
 test("A simple example", () => {
-  const app = new cdk.App()
-  const stack1 = new cdk.Stack(app, "Stack1", {
+  const app = new App()
+  const stack1 = new Stack(app, "Stack1", {
     env: {
       account: "112233445566",
       region: "us-east-1",
     },
   })
-  const stack2 = new cdk.Stack(app, "Stack2", {
+  const stack2 = new Stack(app, "Stack2", {
     env: {
       account: "112233445566",
       region: "eu-west-1",
@@ -70,15 +70,15 @@ test("A simple example", () => {
 })
 
 test("Auth Lambdas with nonce", () => {
-  const app1 = new cdk.App()
-  const app2 = new cdk.App()
-  const stack1 = new cdk.Stack(app1, "Stack", {
+  const app1 = new App()
+  const app2 = new App()
+  const stack1 = new Stack(app1, "Stack", {
     env: {
       account: "112233445566",
       region: "us-east-1",
     },
   })
-  const stack2 = new cdk.Stack(app2, "Stack", {
+  const stack2 = new Stack(app2, "Stack", {
     env: {
       account: "112233445566",
       region: "us-east-1",
@@ -96,7 +96,7 @@ test("Auth Lambdas with nonce", () => {
 
   function getLogicalId(scope: AuthLambdas): string {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-    return cdk.Stack.of(scope).resolve(
+    return Stack.of(scope).resolve(
       (
         scope.node
           .findChild("ParseAuthFunction")

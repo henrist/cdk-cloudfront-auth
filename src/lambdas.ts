@@ -1,8 +1,9 @@
-import * as iam from "@aws-cdk/aws-iam"
-import * as lambda from "@aws-cdk/aws-lambda"
-import * as cdk from "@aws-cdk/core"
+import * as iam from "aws-cdk-lib/aws-iam"
+import * as lambda from "aws-cdk-lib/aws-lambda"
 import { ParameterResource } from "@henrist/cdk-cross-region-params"
 import * as path from "path"
+import { Construct } from "constructs"
+import { Duration, Stack } from "aws-cdk-lib"
 
 const isSnapshot = process.env.IS_SNAPSHOT === "true"
 
@@ -25,7 +26,7 @@ interface AuthLambdasProps {
  * This will provision SSM Parameters the region where the CloudFront
  * distribution is deployed from, so that it can be used cross-region.
  */
-export class AuthLambdas extends cdk.Construct {
+export class AuthLambdas extends Construct {
   public readonly checkAuthFn: ParameterResource<lambda.IVersion>
   public readonly httpHeadersFn: ParameterResource<lambda.IVersion>
   public readonly parseAuthFn: ParameterResource<lambda.IVersion>
@@ -35,10 +36,10 @@ export class AuthLambdas extends cdk.Construct {
   private readonly regions: string[]
   private readonly nonce: string | undefined
 
-  constructor(scope: cdk.Construct, id: string, props: AuthLambdasProps) {
+  constructor(scope: Construct, id: string, props: AuthLambdasProps) {
     super(scope, id)
 
-    const region = cdk.Stack.of(this).region
+    const region = Stack.of(this).region
     this.regions = props.regions
 
     this.nonce = props.nonce
@@ -75,8 +76,8 @@ export class AuthLambdas extends cdk.Construct {
   }
 
   private addFunction(id: string, assetName: string, role: iam.IRole) {
-    const region = cdk.Stack.of(this).region
-    const stackName = cdk.Stack.of(this).stackName
+    const region = Stack.of(this).region
+    const stackName = Stack.of(this).stackName
 
     const fn = new lambda.Function(this, id, {
       code:
@@ -85,7 +86,7 @@ export class AuthLambdas extends cdk.Construct {
           : lambda.Code.fromAsset(path.join(__dirname, `../dist/${assetName}`)),
       handler: "index.handler",
       runtime: lambda.Runtime.NODEJS_12_X,
-      timeout: cdk.Duration.seconds(5),
+      timeout: Duration.seconds(5),
       role,
       description:
         this.nonce == null ? undefined : `Nonce value: ${this.nonce}`,

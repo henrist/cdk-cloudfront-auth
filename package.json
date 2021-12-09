@@ -31,25 +31,20 @@
     "access": "public"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "1.125.0",
-    "@aws-cdk/aws-cloudfront": "1.125.0",
-    "@aws-cdk/aws-cognito": "1.125.0",
-    "@aws-cdk/aws-iam": "1.125.0",
-    "@aws-cdk/aws-lambda": "1.125.0",
-    "@aws-cdk/aws-s3": "1.125.0",
-    "@aws-cdk/core": "1.125.0",
-    "@aws-cdk/custom-resources": "1.125.0",
+    "@aws-cdk/assert": "2.1.0",
     "@commitlint/cli": "12.1.4",
     "@commitlint/config-conventional": "12.1.4",
     "@types/aws-lambda": "8.10.85",
     "@types/cookie": "0.4.1",
-    "@types/jest": "26.0.24",
+    "@types/jest": "27.0.3",
     "@types/jsonwebtoken": "8.5.6",
     "@types/node": "14.18.0",
     "@typescript-eslint/eslint-plugin": "4.33.0",
     "@typescript-eslint/parser": "4.33.0",
+    "aws-cdk-lib": "2.1.0",
     "aws-sdk": "2.918.0",
     "axios": "0.21.4",
+    "constructs": "10.0.9",
     "cookie": "0.4.1",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
@@ -58,7 +53,7 @@
     "html-loader": "2.1.2",
     "husky": "6.0.0",
     "jest": "27.4.3",
-    "jest-cdk-snapshot": "1.4.2",
+    "jest-cdk-snapshot": "2.0.1",
     "jsonwebtoken": "8.5.1",
     "jwks-rsa": "2.0.5",
     "prettier": "2.5.1",
@@ -72,16 +67,10 @@
     "webpack-cli": "4.9.1"
   },
   "dependencies": {
-    "@henrist/cdk-cross-region-params": "^1.0.0",
-    "@henrist/cdk-lambda-config": "^1.0.0"
+    "@henrist/cdk-cross-region-params": "^2.0.0",
+    "@henrist/cdk-lambda-config": "^2.0.0"
   },
   "peerDependencies": {
-    "@aws-cdk/aws-cloudfront": "^1.72.0",
-    "@aws-cdk/aws-cognito": "^1.72.0",
-    "@aws-cdk/aws-iam": "^1.72.0",
-    "@aws-cdk/aws-lambda": "^1.72.0",
-    "@aws-cdk/aws-ssm": "^1.72.0",
-    "@aws-cdk/core": "^1.72.0",
-    "@aws-cdk/custom-resources": "^1.72.0"
+    "aws-cdk-lib": "^2.0.0"
   }
 }

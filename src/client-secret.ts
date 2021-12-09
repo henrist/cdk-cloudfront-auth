@@ -1,21 +1,17 @@
-import * as cognito from "@aws-cdk/aws-cognito"
-import * as iam from "@aws-cdk/aws-iam"
-import * as cdk from "@aws-cdk/core"
-import * as cr from "@aws-cdk/custom-resources"
+import * as cognito from "aws-cdk-lib/aws-cognito"
+import * as iam from "aws-cdk-lib/aws-iam"
+import * as cr from "aws-cdk-lib/custom-resources"
+import { Construct } from "constructs"
 
 export interface RetrieveClientSecretProps {
   client: cognito.IUserPoolClient
   userPool: cognito.IUserPool
 }
 
-export class RetrieveClientSecret extends cdk.Construct {
+export class RetrieveClientSecret extends Construct {
   public clientSecretValue: string
 
-  constructor(
-    scope: cdk.Construct,
-    id: string,
-    props: RetrieveClientSecretProps,
-  ) {
+  constructor(scope: Construct, id: string, props: RetrieveClientSecretProps) {
     super(scope, id)
 
     const clientSecret = new cr.AwsCustomResource(this, "Resource", {

@@ -1,7 +1,7 @@
-import * as cognito from "@aws-cdk/aws-cognito"
-import * as iam from "@aws-cdk/aws-iam"
-import * as cdk from "@aws-cdk/core"
-import * as cr from "@aws-cdk/custom-resources"
+import * as cognito from "aws-cdk-lib/aws-cognito"
+import * as iam from "aws-cdk-lib/aws-iam"
+import * as cr from "aws-cdk-lib/custom-resources"
+import { Construct } from "constructs"
 
 interface ClientUpdateProps {
   oauthScopes: string[]
@@ -12,8 +12,8 @@ interface ClientUpdateProps {
   identityProviders: string[]
 }
 
-export class ClientUpdate extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string, props: ClientUpdateProps) {
+export class ClientUpdate extends Construct {
+  constructor(scope: Construct, id: string, props: ClientUpdateProps) {
     super(scope, id)
 
     new cr.AwsCustomResource(this, "Resource", {

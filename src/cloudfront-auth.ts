@@ -1,20 +1,20 @@
-import * as cloudfront from "@aws-cdk/aws-cloudfront"
+import * as cloudfront from "aws-cdk-lib/aws-cloudfront"
 import {
   AddBehaviorOptions,
   BehaviorOptions,
   IOrigin,
   ViewerProtocolPolicy,
-} from "@aws-cdk/aws-cloudfront"
-import * as cognito from "@aws-cdk/aws-cognito"
-import * as lambda from "@aws-cdk/aws-lambda"
-import { IVersion } from "@aws-cdk/aws-lambda"
-import * as cdk from "@aws-cdk/core"
+} from "aws-cdk-lib/aws-cloudfront"
+import * as cognito from "aws-cdk-lib/aws-cognito"
+import * as lambda from "aws-cdk-lib/aws-lambda"
+import { IVersion } from "aws-cdk-lib/aws-lambda"
 import { LambdaConfig } from "@henrist/cdk-lambda-config"
 import { RetrieveClientSecret } from "./client-secret"
 import { ClientUpdate } from "./client-update"
 import { GenerateSecret } from "./generate-secret"
 import { StoredConfig } from "./handlers/util/config"
 import { AuthLambdas } from "./lambdas"
+import { Construct } from "constructs"
 
 export interface CloudFrontAuthProps {
   /**
@@ -83,7 +83,7 @@ export interface UpdateClientProps {
  * Configure previously deployed lambda functions, Cognito client
  * and CloudFront distribution.
  */
-export class CloudFrontAuth extends cdk.Construct {
+export class CloudFrontAuth extends Construct {
   public readonly callbackPath: string
   public readonly signOutRedirectTo: string
   public readonly signOutPath: string
@@ -101,7 +101,7 @@ export class CloudFrontAuth extends cdk.Construct {
 
   private readonly oauthScopes: string[]
 
-  constructor(scope: cdk.Construct, id: string, props: CloudFrontAuthProps) {
+  constructor(scope: Construct, id: string, props: CloudFrontAuthProps) {
     super(scope, id)
 
     this.callbackPath = props.callbackPath ?? "/auth/callback"
