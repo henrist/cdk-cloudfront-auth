@@ -23,7 +23,7 @@ export async function httpPostWithRetry(
     ++attempts
     try {
       return await axiosInstance.post(url, data, config)
-    } catch (err) {
+    } catch (err: any) {
       logger.debug(`HTTP POST to ${url} failed (attempt ${attempts}):`)
       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       logger.debug((err.response && err.response.data) || err)
