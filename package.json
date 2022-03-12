@@ -43,7 +43,7 @@
     "@typescript-eslint/parser": "5.14.0",
     "aws-cdk-lib": "2.15.0",
     "aws-sdk": "2.1048.0",
-    "axios": "0.26.0",
+    "axios": "0.26.1",
     "constructs": "10.0.13",
     "cookie": "0.4.2",
     "eslint": "8.10.0",
