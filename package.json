@@ -55,7 +55,7 @@
     "jest-cdk-snapshot": "2.0.1",
     "jsonwebtoken": "8.5.1",
     "jwks-rsa": "2.0.5",
-    "prettier": "2.5.1",
+    "prettier": "2.6.0",
     "rimraf": "3.0.2",
     "semantic-release": "19.0.2",
     "ts-jest": "27.1.3",
