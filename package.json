@@ -31,7 +31,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "2.16.0",
+    "@aws-cdk/assert": "2.17.0",
     "@commitlint/cli": "16.2.3",
     "@commitlint/config-conventional": "16.2.1",
     "@types/aws-lambda": "8.10.93",
@@ -41,7 +41,7 @@
     "@types/node": "16.11.26",
     "@typescript-eslint/eslint-plugin": "5.15.0",
     "@typescript-eslint/parser": "5.15.0",
-    "aws-cdk-lib": "2.16.0",
+    "aws-cdk-lib": "2.17.0",
     "aws-sdk": "2.1048.0",
     "axios": "0.26.1",
     "constructs": "10.0.13",
