@@ -38,7 +38,7 @@
     "@types/cookie": "0.5.1",
     "@types/jest": "27.5.2",
     "@types/jsonwebtoken": "8.5.8",
-    "@types/node": "16.11.41",
+    "@types/node": "16.11.42",
     "@typescript-eslint/eslint-plugin": "5.30.0",
     "@typescript-eslint/parser": "5.30.0",
     "aws-cdk-lib": "2.17.0",
