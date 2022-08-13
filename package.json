@@ -34,7 +34,7 @@
     "@aws-cdk/assert": "2.35.0",
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
-    "@types/aws-lambda": "8.10.101",
+    "@types/aws-lambda": "8.10.102",
     "@types/cookie": "0.5.1",
     "@types/jest": "28.1.6",
     "@types/jsonwebtoken": "8.5.8",
