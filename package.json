@@ -37,7 +37,7 @@
     "@types/aws-lambda": "8.10.102",
     "@types/cookie": "0.5.1",
     "@types/jest": "28.1.8",
-    "@types/jsonwebtoken": "8.5.8",
+    "@types/jsonwebtoken": "8.5.9",
     "@types/node": "16.11.56",
     "@typescript-eslint/eslint-plugin": "5.33.1",
     "@typescript-eslint/parser": "5.33.1",
