@@ -65,12 +65,12 @@ Object {
             "Arn",
           ],
         },
-        "Runtime": "nodejs12.x",
+        "Runtime": "nodejs16.x",
         "Timeout": 5,
       },
       "Type": "AWS::Lambda::Function",
     },
-    "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D622e311034dd41647e4fe9b3802c5f55c3": Object {
+    "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D627dbec5a8502ab12d36dafcbdebcc9fd6": Object {
       "Properties": Object {
         "FunctionName": Object {
           "Ref": "AuthLambdasCheckAuthFunction6B3C9473",
@@ -90,7 +90,7 @@ Object {
             Array [
               "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn\\",\\"Value\\":\\"",
               Object {
-                "Ref": "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D622e311034dd41647e4fe9b3802c5f55c3",
+                "Ref": "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D627dbec5a8502ab12d36dafcbdebcc9fd6",
               },
               "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn\\"}}",
             ],
@@ -110,7 +110,7 @@ Object {
             Array [
               "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn\\",\\"Value\\":\\"",
               Object {
-                "Ref": "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D622e311034dd41647e4fe9b3802c5f55c3",
+                "Ref": "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D627dbec5a8502ab12d36dafcbdebcc9fd6",
               },
               "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn\\"}}",
             ],
@@ -159,12 +159,12 @@ Object {
             "Arn",
           ],
         },
-        "Runtime": "nodejs12.x",
+        "Runtime": "nodejs16.x",
         "Timeout": 5,
       },
       "Type": "AWS::Lambda::Function",
     },
-    "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2E2e311034dd41647e4fe9b3802c5f55c3": Object {
+    "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2E7dbec5a8502ab12d36dafcbdebcc9fd6": Object {
       "Properties": Object {
         "FunctionName": Object {
           "Ref": "AuthLambdasHttpHeadersFunctionC7A2BAB9",
@@ -184,7 +184,7 @@ Object {
             Array [
               "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn\\",\\"Value\\":\\"",
               Object {
-                "Ref": "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2E2e311034dd41647e4fe9b3802c5f55c3",
+                "Ref": "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2E7dbec5a8502ab12d36dafcbdebcc9fd6",
               },
               "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn\\"}}",
             ],
@@ -204,7 +204,7 @@ Object {
             Array [
               "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn\\",\\"Value\\":\\"",
               Object {
-                "Ref": "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2E2e311034dd41647e4fe9b3802c5f55c3",
+                "Ref": "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2E7dbec5a8502ab12d36dafcbdebcc9fd6",
               },
               "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn\\"}}",
             ],
@@ -253,12 +253,12 @@ Object {
             "Arn",
           ],
         },
-        "Runtime": "nodejs12.x",
+        "Runtime": "nodejs16.x",
         "Timeout": 5,
       },
       "Type": "AWS::Lambda::Function",
     },
-    "AuthLambdasParseAuthFunctionCurrentVersionA32A59912e311034dd41647e4fe9b3802c5f55c3": Object {
+    "AuthLambdasParseAuthFunctionCurrentVersionA32A59917dbec5a8502ab12d36dafcbdebcc9fd6": Object {
       "Properties": Object {
         "FunctionName": Object {
           "Ref": "AuthLambdasParseAuthFunctionC04A121B",
@@ -278,7 +278,7 @@ Object {
             Array [
               "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn\\",\\"Value\\":\\"",
               Object {
-                "Ref": "AuthLambdasParseAuthFunctionCurrentVersionA32A59912e311034dd41647e4fe9b3802c5f55c3",
+                "Ref": "AuthLambdasParseAuthFunctionCurrentVersionA32A59917dbec5a8502ab12d36dafcbdebcc9fd6",
               },
               "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn\\"}}",
             ],
@@ -298,7 +298,7 @@ Object {
             Array [
               "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn\\",\\"Value\\":\\"",
               Object {
-                "Ref": "AuthLambdasParseAuthFunctionCurrentVersionA32A59912e311034dd41647e4fe9b3802c5f55c3",
+                "Ref": "AuthLambdasParseAuthFunctionCurrentVersionA32A59917dbec5a8502ab12d36dafcbdebcc9fd6",
               },
               "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn\\"}}",
             ],
@@ -347,12 +347,12 @@ Object {
             "Arn",
           ],
         },
-        "Runtime": "nodejs12.x",
+        "Runtime": "nodejs16.x",
         "Timeout": 5,
       },
       "Type": "AWS::Lambda::Function",
     },
-    "AuthLambdasRefreshAuthFunctionCurrentVersion632285F62e311034dd41647e4fe9b3802c5f55c3": Object {
+    "AuthLambdasRefreshAuthFunctionCurrentVersion632285F67dbec5a8502ab12d36dafcbdebcc9fd6": Object {
       "Properties": Object {
         "FunctionName": Object {
           "Ref": "AuthLambdasRefreshAuthFunction4B0B3BD6",
@@ -372,7 +372,7 @@ Object {
             Array [
               "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn\\",\\"Value\\":\\"",
               Object {
-                "Ref": "AuthLambdasRefreshAuthFunctionCurrentVersion632285F62e311034dd41647e4fe9b3802c5f55c3",
+                "Ref": "AuthLambdasRefreshAuthFunctionCurrentVersion632285F67dbec5a8502ab12d36dafcbdebcc9fd6",
               },
               "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn\\"}}",
             ],
@@ -392,7 +392,7 @@ Object {
             Array [
               "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn\\",\\"Value\\":\\"",
               Object {
-                "Ref": "AuthLambdasRefreshAuthFunctionCurrentVersion632285F62e311034dd41647e4fe9b3802c5f55c3",
+                "Ref": "AuthLambdasRefreshAuthFunctionCurrentVersion632285F67dbec5a8502ab12d36dafcbdebcc9fd6",
               },
               "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn\\"}}",
             ],
@@ -479,12 +479,12 @@ Object {
             "Arn",
           ],
         },
-        "Runtime": "nodejs12.x",
+        "Runtime": "nodejs16.x",
         "Timeout": 5,
       },
       "Type": "AWS::Lambda::Function",
     },
-    "AuthLambdasSignOutFunctionCurrentVersion0576BBB12e311034dd41647e4fe9b3802c5f55c3": Object {
+    "AuthLambdasSignOutFunctionCurrentVersion0576BBB17dbec5a8502ab12d36dafcbdebcc9fd6": Object {
       "Properties": Object {
         "FunctionName": Object {
           "Ref": "AuthLambdasSignOutFunction251863E4",
@@ -504,7 +504,7 @@ Object {
             Array [
               "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn\\",\\"Value\\":\\"",
               Object {
-                "Ref": "AuthLambdasSignOutFunctionCurrentVersion0576BBB12e311034dd41647e4fe9b3802c5f55c3",
+                "Ref": "AuthLambdasSignOutFunctionCurrentVersion0576BBB17dbec5a8502ab12d36dafcbdebcc9fd6",
               },
               "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn\\"}}",
             ],
@@ -524,7 +524,7 @@ Object {
             Array [
               "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn\\",\\"Value\\":\\"",
               Object {
-                "Ref": "AuthLambdasSignOutFunctionCurrentVersion0576BBB12e311034dd41647e4fe9b3802c5f55c3",
+                "Ref": "AuthLambdasSignOutFunctionCurrentVersion0576BBB17dbec5a8502ab12d36dafcbdebcc9fd6",
               },
               "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn\\"}}",
             ],
@@ -1401,7 +1401,7 @@ Object {
             "Arn",
           ],
         },
-        "Runtime": "nodejs12.x",
+        "Runtime": "nodejs16.x",
       },
       "Type": "AWS::Lambda::Function",
     },

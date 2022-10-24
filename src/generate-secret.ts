@@ -56,7 +56,7 @@ class GenerateSecretProvider extends Construct {
           path.join(__dirname, "../dist/generate-secret"),
         ),
         handler: "index.handler",
-        runtime: lambda.Runtime.NODEJS_12_X,
+        runtime: lambda.Runtime.NODEJS_16_X,
       }),
     })
 
