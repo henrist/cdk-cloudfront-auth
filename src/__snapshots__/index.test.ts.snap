@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`A simple example 1`] = `
-Object {
-  "Resources": Object {
-    "AWS679f53fac002430cb0da5b7982bd22872D164C4C": Object {
-      "DependsOn": Array [
+{
+  "Resources": {
+    "AWS679f53fac002430cb0da5b7982bd22872D164C4C": {
+      "DependsOn": [
         "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
       ],
-      "Properties": Object {
+      "Properties": {
         "Code": Any<Object>,
         "Handler": "index.handler",
-        "Role": Object {
-          "Fn::GetAtt": Array [
+        "Role": {
+          "Fn::GetAtt": [
             "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
             "Arn",
           ],
@@ -21,27 +21,27 @@ Object {
       },
       "Type": "AWS::Lambda::Function",
     },
-    "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2": Object {
-      "Properties": Object {
-        "AssumeRolePolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
               "Action": "sts:AssumeRole",
               "Effect": "Allow",
-              "Principal": Object {
+              "Principal": {
                 "Service": "lambda.amazonaws.com",
               },
             },
           ],
           "Version": "2012-10-17",
         },
-        "ManagedPolicyArns": Array [
-          Object {
-            "Fn::Join": Array [
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
               "",
-              Array [
+              [
                 "arn:",
-                Object {
+                {
                   "Ref": "AWS::Partition",
                 },
                 ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
@@ -52,15 +52,15 @@ Object {
       },
       "Type": "AWS::IAM::Role",
     },
-    "AuthLambdasCheckAuthFunction6B3C9473": Object {
-      "DependsOn": Array [
+    "AuthLambdasCheckAuthFunction6B3C9473": {
+      "DependsOn": [
         "AuthLambdasServiceRoleF10A0667",
       ],
-      "Properties": Object {
+      "Properties": {
         "Code": Any<Object>,
         "Handler": "index.handler",
-        "Role": Object {
-          "Fn::GetAtt": Array [
+        "Role": {
+          "Fn::GetAtt": [
             "AuthLambdasServiceRoleF10A0667",
             "Arn",
           ],
@@ -70,49 +70,49 @@ Object {
       },
       "Type": "AWS::Lambda::Function",
     },
-    "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D627dbec5a8502ab12d36dafcbdebcc9fd6": Object {
-      "Properties": Object {
-        "FunctionName": Object {
+    "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D627dbec5a8502ab12d36dafcbdebcc9fd6": {
+      "Properties": {
+        "FunctionName": {
           "Ref": "AuthLambdasCheckAuthFunction6B3C9473",
         },
       },
       "Type": "AWS::Lambda::Version",
     },
-    "AuthLambdasCheckAuthFunctionVersionParamParameuwest1Resoure8ACD3434": Object {
+    "AuthLambdasCheckAuthFunctionVersionParamParameuwest1Resoure8ACD3434": {
       "DeletionPolicy": "Delete",
-      "DependsOn": Array [
+      "DependsOn": [
         "AuthLambdasCheckAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicy088F1114",
       ],
-      "Properties": Object {
-        "Create": Object {
-          "Fn::Join": Array [
+      "Properties": {
+        "Create": {
+          "Fn::Join": [
             "",
-            Array [
-              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn\\",\\"Value\\":\\"",
-              Object {
+            [
+              "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn","Value":"",
+              {
                 "Ref": "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D627dbec5a8502ab12d36dafcbdebcc9fd6",
               },
-              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn\\"}}",
+              "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn"}}",
             ],
           ],
         },
-        "Delete": "{\\"service\\":\\"SSM\\",\\"action\\":\\"deleteParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn\\"},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn\\"}}",
+        "Delete": "{"service":"SSM","action":"deleteParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn"},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn"}}",
         "InstallLatestAwsSdk": false,
-        "ServiceToken": Object {
-          "Fn::GetAtt": Array [
+        "ServiceToken": {
+          "Fn::GetAtt": [
             "AWS679f53fac002430cb0da5b7982bd22872D164C4C",
             "Arn",
           ],
         },
-        "Update": Object {
-          "Fn::Join": Array [
+        "Update": {
+          "Fn::Join": [
             "",
-            Array [
-              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn\\",\\"Value\\":\\"",
-              Object {
+            [
+              "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn","Value":"",
+              {
                 "Ref": "AuthLambdasCheckAuthFunctionCurrentVersionF10C4D627dbec5a8502ab12d36dafcbdebcc9fd6",
               },
-              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn\\"}}",
+              "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-CheckAuthFunction-function-arn"}}",
             ],
           ],
         },
@@ -120,16 +120,16 @@ Object {
       "Type": "Custom::AWS",
       "UpdateReplacePolicy": "Delete",
     },
-    "AuthLambdasCheckAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicy088F1114": Object {
-      "Properties": Object {
-        "PolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "AuthLambdasCheckAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicy088F1114": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
               "Action": "ssm:PutParameter",
               "Effect": "Allow",
               "Resource": "*",
             },
-            Object {
+            {
               "Action": "ssm:DeleteParameter",
               "Effect": "Allow",
               "Resource": "*",
@@ -138,23 +138,23 @@ Object {
           "Version": "2012-10-17",
         },
         "PolicyName": "AuthLambdasCheckAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicy088F1114",
-        "Roles": Array [
-          Object {
+        "Roles": [
+          {
             "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
           },
         ],
       },
       "Type": "AWS::IAM::Policy",
     },
-    "AuthLambdasHttpHeadersFunctionC7A2BAB9": Object {
-      "DependsOn": Array [
+    "AuthLambdasHttpHeadersFunctionC7A2BAB9": {
+      "DependsOn": [
         "AuthLambdasServiceRoleF10A0667",
       ],
-      "Properties": Object {
+      "Properties": {
         "Code": Any<Object>,
         "Handler": "index.handler",
-        "Role": Object {
-          "Fn::GetAtt": Array [
+        "Role": {
+          "Fn::GetAtt": [
             "AuthLambdasServiceRoleF10A0667",
             "Arn",
           ],
@@ -164,49 +164,49 @@ Object {
       },
       "Type": "AWS::Lambda::Function",
     },
-    "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2E7dbec5a8502ab12d36dafcbdebcc9fd6": Object {
-      "Properties": Object {
-        "FunctionName": Object {
+    "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2E7dbec5a8502ab12d36dafcbdebcc9fd6": {
+      "Properties": {
+        "FunctionName": {
           "Ref": "AuthLambdasHttpHeadersFunctionC7A2BAB9",
         },
       },
       "Type": "AWS::Lambda::Version",
     },
-    "AuthLambdasHttpHeadersFunctionVersionParamParameuwest1Resoure0C3C81F2": Object {
+    "AuthLambdasHttpHeadersFunctionVersionParamParameuwest1Resoure0C3C81F2": {
       "DeletionPolicy": "Delete",
-      "DependsOn": Array [
+      "DependsOn": [
         "AuthLambdasHttpHeadersFunctionVersionParamParameuwest1ResoureCustomResourcePolicyC99B8AA6",
       ],
-      "Properties": Object {
-        "Create": Object {
-          "Fn::Join": Array [
+      "Properties": {
+        "Create": {
+          "Fn::Join": [
             "",
-            Array [
-              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn\\",\\"Value\\":\\"",
-              Object {
+            [
+              "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn","Value":"",
+              {
                 "Ref": "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2E7dbec5a8502ab12d36dafcbdebcc9fd6",
               },
-              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn\\"}}",
+              "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn"}}",
             ],
           ],
         },
-        "Delete": "{\\"service\\":\\"SSM\\",\\"action\\":\\"deleteParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn\\"},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn\\"}}",
+        "Delete": "{"service":"SSM","action":"deleteParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn"},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn"}}",
         "InstallLatestAwsSdk": false,
-        "ServiceToken": Object {
-          "Fn::GetAtt": Array [
+        "ServiceToken": {
+          "Fn::GetAtt": [
             "AWS679f53fac002430cb0da5b7982bd22872D164C4C",
             "Arn",
           ],
         },
-        "Update": Object {
-          "Fn::Join": Array [
+        "Update": {
+          "Fn::Join": [
             "",
-            Array [
-              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn\\",\\"Value\\":\\"",
-              Object {
+            [
+              "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn","Value":"",
+              {
                 "Ref": "AuthLambdasHttpHeadersFunctionCurrentVersion8B8CDE2E7dbec5a8502ab12d36dafcbdebcc9fd6",
               },
-              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn\\"}}",
+              "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-HttpHeadersFunction-function-arn"}}",
             ],
           ],
         },
@@ -214,16 +214,16 @@ Object {
       "Type": "Custom::AWS",
       "UpdateReplacePolicy": "Delete",
     },
-    "AuthLambdasHttpHeadersFunctionVersionParamParameuwest1ResoureCustomResourcePolicyC99B8AA6": Object {
-      "Properties": Object {
-        "PolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "AuthLambdasHttpHeadersFunctionVersionParamParameuwest1ResoureCustomResourcePolicyC99B8AA6": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
               "Action": "ssm:PutParameter",
               "Effect": "Allow",
               "Resource": "*",
             },
-            Object {
+            {
               "Action": "ssm:DeleteParameter",
               "Effect": "Allow",
               "Resource": "*",
@@ -232,23 +232,23 @@ Object {
           "Version": "2012-10-17",
         },
         "PolicyName": "AuthLambdasHttpHeadersFunctionVersionParamParameuwest1ResoureCustomResourcePolicyC99B8AA6",
-        "Roles": Array [
-          Object {
+        "Roles": [
+          {
             "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
           },
         ],
       },
       "Type": "AWS::IAM::Policy",
     },
-    "AuthLambdasParseAuthFunctionC04A121B": Object {
-      "DependsOn": Array [
+    "AuthLambdasParseAuthFunctionC04A121B": {
+      "DependsOn": [
         "AuthLambdasServiceRoleF10A0667",
       ],
-      "Properties": Object {
+      "Properties": {
         "Code": Any<Object>,
         "Handler": "index.handler",
-        "Role": Object {
-          "Fn::GetAtt": Array [
+        "Role": {
+          "Fn::GetAtt": [
             "AuthLambdasServiceRoleF10A0667",
             "Arn",
           ],
@@ -258,49 +258,49 @@ Object {
       },
       "Type": "AWS::Lambda::Function",
     },
-    "AuthLambdasParseAuthFunctionCurrentVersionA32A59917dbec5a8502ab12d36dafcbdebcc9fd6": Object {
-      "Properties": Object {
-        "FunctionName": Object {
+    "AuthLambdasParseAuthFunctionCurrentVersionA32A59917dbec5a8502ab12d36dafcbdebcc9fd6": {
+      "Properties": {
+        "FunctionName": {
           "Ref": "AuthLambdasParseAuthFunctionC04A121B",
         },
       },
       "Type": "AWS::Lambda::Version",
     },
-    "AuthLambdasParseAuthFunctionVersionParamParameuwest1Resoure934661C6": Object {
+    "AuthLambdasParseAuthFunctionVersionParamParameuwest1Resoure934661C6": {
       "DeletionPolicy": "Delete",
-      "DependsOn": Array [
+      "DependsOn": [
         "AuthLambdasParseAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicyCEAE27DB",
       ],
-      "Properties": Object {
-        "Create": Object {
-          "Fn::Join": Array [
+      "Properties": {
+        "Create": {
+          "Fn::Join": [
             "",
-            Array [
-              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn\\",\\"Value\\":\\"",
-              Object {
+            [
+              "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn","Value":"",
+              {
                 "Ref": "AuthLambdasParseAuthFunctionCurrentVersionA32A59917dbec5a8502ab12d36dafcbdebcc9fd6",
               },
-              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn\\"}}",
+              "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn"}}",
             ],
           ],
         },
-        "Delete": "{\\"service\\":\\"SSM\\",\\"action\\":\\"deleteParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn\\"},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn\\"}}",
+        "Delete": "{"service":"SSM","action":"deleteParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn"},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn"}}",
         "InstallLatestAwsSdk": false,
-        "ServiceToken": Object {
-          "Fn::GetAtt": Array [
+        "ServiceToken": {
+          "Fn::GetAtt": [
             "AWS679f53fac002430cb0da5b7982bd22872D164C4C",
             "Arn",
           ],
         },
-        "Update": Object {
-          "Fn::Join": Array [
+        "Update": {
+          "Fn::Join": [
             "",
-            Array [
-              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn\\",\\"Value\\":\\"",
-              Object {
+            [
+              "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn","Value":"",
+              {
                 "Ref": "AuthLambdasParseAuthFunctionCurrentVersionA32A59917dbec5a8502ab12d36dafcbdebcc9fd6",
               },
-              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn\\"}}",
+              "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-ParseAuthFunction-function-arn"}}",
             ],
           ],
         },
@@ -308,16 +308,16 @@ Object {
       "Type": "Custom::AWS",
       "UpdateReplacePolicy": "Delete",
     },
-    "AuthLambdasParseAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicyCEAE27DB": Object {
-      "Properties": Object {
-        "PolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "AuthLambdasParseAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicyCEAE27DB": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
               "Action": "ssm:PutParameter",
               "Effect": "Allow",
               "Resource": "*",
             },
-            Object {
+            {
               "Action": "ssm:DeleteParameter",
               "Effect": "Allow",
               "Resource": "*",
@@ -326,23 +326,23 @@ Object {
           "Version": "2012-10-17",
         },
         "PolicyName": "AuthLambdasParseAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicyCEAE27DB",
-        "Roles": Array [
-          Object {
+        "Roles": [
+          {
             "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
           },
         ],
       },
       "Type": "AWS::IAM::Policy",
     },
-    "AuthLambdasRefreshAuthFunction4B0B3BD6": Object {
-      "DependsOn": Array [
+    "AuthLambdasRefreshAuthFunction4B0B3BD6": {
+      "DependsOn": [
         "AuthLambdasServiceRoleF10A0667",
       ],
-      "Properties": Object {
+      "Properties": {
         "Code": Any<Object>,
         "Handler": "index.handler",
-        "Role": Object {
-          "Fn::GetAtt": Array [
+        "Role": {
+          "Fn::GetAtt": [
             "AuthLambdasServiceRoleF10A0667",
             "Arn",
           ],
@@ -352,49 +352,49 @@ Object {
       },
       "Type": "AWS::Lambda::Function",
     },
-    "AuthLambdasRefreshAuthFunctionCurrentVersion632285F67dbec5a8502ab12d36dafcbdebcc9fd6": Object {
-      "Properties": Object {
-        "FunctionName": Object {
+    "AuthLambdasRefreshAuthFunctionCurrentVersion632285F67dbec5a8502ab12d36dafcbdebcc9fd6": {
+      "Properties": {
+        "FunctionName": {
           "Ref": "AuthLambdasRefreshAuthFunction4B0B3BD6",
         },
       },
       "Type": "AWS::Lambda::Version",
     },
-    "AuthLambdasRefreshAuthFunctionVersionParamParameuwest1Resoure0C0D8913": Object {
+    "AuthLambdasRefreshAuthFunctionVersionParamParameuwest1Resoure0C0D8913": {
       "DeletionPolicy": "Delete",
-      "DependsOn": Array [
+      "DependsOn": [
         "AuthLambdasRefreshAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicy095CEC70",
       ],
-      "Properties": Object {
-        "Create": Object {
-          "Fn::Join": Array [
+      "Properties": {
+        "Create": {
+          "Fn::Join": [
             "",
-            Array [
-              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn\\",\\"Value\\":\\"",
-              Object {
+            [
+              "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn","Value":"",
+              {
                 "Ref": "AuthLambdasRefreshAuthFunctionCurrentVersion632285F67dbec5a8502ab12d36dafcbdebcc9fd6",
               },
-              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn\\"}}",
+              "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn"}}",
             ],
           ],
         },
-        "Delete": "{\\"service\\":\\"SSM\\",\\"action\\":\\"deleteParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn\\"},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn\\"}}",
+        "Delete": "{"service":"SSM","action":"deleteParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn"},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn"}}",
         "InstallLatestAwsSdk": false,
-        "ServiceToken": Object {
-          "Fn::GetAtt": Array [
+        "ServiceToken": {
+          "Fn::GetAtt": [
             "AWS679f53fac002430cb0da5b7982bd22872D164C4C",
             "Arn",
           ],
         },
-        "Update": Object {
-          "Fn::Join": Array [
+        "Update": {
+          "Fn::Join": [
             "",
-            Array [
-              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn\\",\\"Value\\":\\"",
-              Object {
+            [
+              "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn","Value":"",
+              {
                 "Ref": "AuthLambdasRefreshAuthFunctionCurrentVersion632285F67dbec5a8502ab12d36dafcbdebcc9fd6",
               },
-              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn\\"}}",
+              "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-RefreshAuthFunction-function-arn"}}",
             ],
           ],
         },
@@ -402,16 +402,16 @@ Object {
       "Type": "Custom::AWS",
       "UpdateReplacePolicy": "Delete",
     },
-    "AuthLambdasRefreshAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicy095CEC70": Object {
-      "Properties": Object {
-        "PolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "AuthLambdasRefreshAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicy095CEC70": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
               "Action": "ssm:PutParameter",
               "Effect": "Allow",
               "Resource": "*",
             },
-            Object {
+            {
               "Action": "ssm:DeleteParameter",
               "Effect": "Allow",
               "Resource": "*",
@@ -420,42 +420,42 @@ Object {
           "Version": "2012-10-17",
         },
         "PolicyName": "AuthLambdasRefreshAuthFunctionVersionParamParameuwest1ResoureCustomResourcePolicy095CEC70",
-        "Roles": Array [
-          Object {
+        "Roles": [
+          {
             "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
           },
         ],
       },
       "Type": "AWS::IAM::Policy",
     },
-    "AuthLambdasServiceRoleF10A0667": Object {
-      "Properties": Object {
-        "AssumeRolePolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "AuthLambdasServiceRoleF10A0667": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
               "Action": "sts:AssumeRole",
               "Effect": "Allow",
-              "Principal": Object {
+              "Principal": {
                 "Service": "lambda.amazonaws.com",
               },
             },
-            Object {
+            {
               "Action": "sts:AssumeRole",
               "Effect": "Allow",
-              "Principal": Object {
+              "Principal": {
                 "Service": "edgelambda.amazonaws.com",
               },
             },
           ],
           "Version": "2012-10-17",
         },
-        "ManagedPolicyArns": Array [
-          Object {
-            "Fn::Join": Array [
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
               "",
-              Array [
+              [
                 "arn:",
-                Object {
+                {
                   "Ref": "AWS::Partition",
                 },
                 ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
@@ -466,15 +466,15 @@ Object {
       },
       "Type": "AWS::IAM::Role",
     },
-    "AuthLambdasSignOutFunction251863E4": Object {
-      "DependsOn": Array [
+    "AuthLambdasSignOutFunction251863E4": {
+      "DependsOn": [
         "AuthLambdasServiceRoleF10A0667",
       ],
-      "Properties": Object {
+      "Properties": {
         "Code": Any<Object>,
         "Handler": "index.handler",
-        "Role": Object {
-          "Fn::GetAtt": Array [
+        "Role": {
+          "Fn::GetAtt": [
             "AuthLambdasServiceRoleF10A0667",
             "Arn",
           ],
@@ -484,49 +484,49 @@ Object {
       },
       "Type": "AWS::Lambda::Function",
     },
-    "AuthLambdasSignOutFunctionCurrentVersion0576BBB17dbec5a8502ab12d36dafcbdebcc9fd6": Object {
-      "Properties": Object {
-        "FunctionName": Object {
+    "AuthLambdasSignOutFunctionCurrentVersion0576BBB17dbec5a8502ab12d36dafcbdebcc9fd6": {
+      "Properties": {
+        "FunctionName": {
           "Ref": "AuthLambdasSignOutFunction251863E4",
         },
       },
       "Type": "AWS::Lambda::Version",
     },
-    "AuthLambdasSignOutFunctionVersionParamParameuwest1Resoure18583D2D": Object {
+    "AuthLambdasSignOutFunctionVersionParamParameuwest1Resoure18583D2D": {
       "DeletionPolicy": "Delete",
-      "DependsOn": Array [
+      "DependsOn": [
         "AuthLambdasSignOutFunctionVersionParamParameuwest1ResoureCustomResourcePolicy16B30BE4",
       ],
-      "Properties": Object {
-        "Create": Object {
-          "Fn::Join": Array [
+      "Properties": {
+        "Create": {
+          "Fn::Join": [
             "",
-            Array [
-              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn\\",\\"Value\\":\\"",
-              Object {
+            [
+              "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn","Value":"",
+              {
                 "Ref": "AuthLambdasSignOutFunctionCurrentVersion0576BBB17dbec5a8502ab12d36dafcbdebcc9fd6",
               },
-              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn\\"}}",
+              "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn"}}",
             ],
           ],
         },
-        "Delete": "{\\"service\\":\\"SSM\\",\\"action\\":\\"deleteParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn\\"},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn\\"}}",
+        "Delete": "{"service":"SSM","action":"deleteParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn"},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn"}}",
         "InstallLatestAwsSdk": false,
-        "ServiceToken": Object {
-          "Fn::GetAtt": Array [
+        "ServiceToken": {
+          "Fn::GetAtt": [
             "AWS679f53fac002430cb0da5b7982bd22872D164C4C",
             "Arn",
           ],
         },
-        "Update": Object {
-          "Fn::Join": Array [
+        "Update": {
+          "Fn::Join": [
             "",
-            Array [
-              "{\\"service\\":\\"SSM\\",\\"action\\":\\"putParameter\\",\\"parameters\\":{\\"Name\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn\\",\\"Value\\":\\"",
-              Object {
+            [
+              "{"service":"SSM","action":"putParameter","parameters":{"Name":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn","Value":"",
+              {
                 "Ref": "AuthLambdasSignOutFunctionCurrentVersion0576BBB17dbec5a8502ab12d36dafcbdebcc9fd6",
               },
-              "\\",\\"Type\\":\\"String\\",\\"Overwrite\\":true},\\"region\\":\\"eu-west-1\\",\\"physicalResourceId\\":{\\"id\\":\\"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn\\"}}",
+              "","Type":"String","Overwrite":true},"region":"eu-west-1","physicalResourceId":{"id":"/cf/region/us-east-1/stack/Stack1/c822e4a2b5e248e64ee706fb7d4af8c80d9b03944e-SignOutFunction-function-arn"}}",
             ],
           ],
         },
@@ -534,16 +534,16 @@ Object {
       "Type": "Custom::AWS",
       "UpdateReplacePolicy": "Delete",
     },
-    "AuthLambdasSignOutFunctionVersionParamParameuwest1ResoureCustomResourcePolicy16B30BE4": Object {
-      "Properties": Object {
-        "PolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "AuthLambdasSignOutFunctionVersionParamParameuwest1ResoureCustomResourcePolicy16B30BE4": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
               "Action": "ssm:PutParameter",
               "Effect": "Allow",
               "Resource": "*",
             },
-            Object {
+            {
               "Action": "ssm:DeleteParameter",
               "Effect": "Allow",
               "Resource": "*",
@@ -552,8 +552,8 @@ Object {
           "Version": "2012-10-17",
         },
         "PolicyName": "AuthLambdasSignOutFunctionVersionParamParameuwest1ResoureCustomResourcePolicy16B30BE4",
-        "Roles": Array [
-          Object {
+        "Roles": [
+          {
             "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
           },
         ],
@@ -565,18 +565,18 @@ Object {
 `;
 
 exports[`A simple example 2`] = `
-Object {
+{
   "Parameters": Any<Object>,
-  "Resources": Object {
-    "AWS679f53fac002430cb0da5b7982bd22872D164C4C": Object {
-      "DependsOn": Array [
+  "Resources": {
+    "AWS679f53fac002430cb0da5b7982bd22872D164C4C": {
+      "DependsOn": [
         "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
       ],
-      "Properties": Object {
+      "Properties": {
         "Code": Any<Object>,
         "Handler": "index.handler",
-        "Role": Object {
-          "Fn::GetAtt": Array [
+        "Role": {
+          "Fn::GetAtt": [
             "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
             "Arn",
           ],
@@ -586,27 +586,27 @@ Object {
       },
       "Type": "AWS::Lambda::Function",
     },
-    "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2": Object {
-      "Properties": Object {
-        "AssumeRolePolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
               "Action": "sts:AssumeRole",
               "Effect": "Allow",
-              "Principal": Object {
+              "Principal": {
                 "Service": "lambda.amazonaws.com",
               },
             },
           ],
           "Version": "2012-10-17",
         },
-        "ManagedPolicyArns": Array [
-          Object {
-            "Fn::Join": Array [
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
               "",
-              Array [
+              [
                 "arn:",
-                Object {
+                {
                   "Ref": "AWS::Partition",
                 },
                 ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
@@ -617,28 +617,28 @@ Object {
       },
       "Type": "AWS::IAM::Role",
     },
-    "AuthCheckAuthFnC12AAE69": Object {
+    "AuthCheckAuthFnC12AAE69": {
       "DeletionPolicy": "Delete",
-      "Properties": Object {
-        "Config": Object {
+      "Properties": {
+        "Config": {
           "callbackPath": "/auth/callback",
-          "clientId": Object {
+          "clientId": {
             "Ref": "UserPoolUserPoolClient40176907",
           },
-          "clientSecret": Object {
-            "Fn::GetAtt": Array [
+          "clientSecret": {
+            "Fn::GetAtt": [
               "AuthClientSecret768E9C19",
               "UserPoolClient.ClientSecret",
             ],
           },
           "cognitoAuthDomain": "my-domain.auth.eu-west-1.amazoncognito.com",
-          "cookieSettings": Object {
+          "cookieSettings": {
             "accessToken": "Path=/; Secure; HttpOnly; SameSite=Lax",
             "idToken": "Path=/; Secure; HttpOnly; SameSite=Lax",
             "nonce": "Path=/; Secure; HttpOnly; SameSite=Lax",
             "refreshToken": "Path=/; Secure; HttpOnly; SameSite=Lax",
           },
-          "httpHeaders": Object {
+          "httpHeaders": {
             "Cache-Control": "no-cache",
             "Content-Security-Policy": "default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; connect-src 'self'",
             "Referrer-Policy": "same-origin",
@@ -648,13 +648,13 @@ Object {
             "X-XSS-Protection": "1; mode=block",
           },
           "logLevel": "warn",
-          "nonceSigningSecret": Object {
-            "Fn::GetAtt": Array [
+          "nonceSigningSecret": {
+            "Fn::GetAtt": [
               "AuthNonceSigningSecretC47F85D8",
               "Value",
             ],
           },
-          "oauthScopes": Array [
+          "oauthScopes": [
             "phone",
             "email",
             "profile",
@@ -664,16 +664,16 @@ Object {
           "refreshAuthPath": "/auth/refresh",
           "signOutPath": "/auth/sign-out",
           "signOutRedirectTo": "/",
-          "userPoolId": Object {
+          "userPoolId": {
             "Ref": "UserPool6BA7E5F2",
           },
         },
-        "FunctionArn": Object {
+        "FunctionArn": {
           "Ref": "SsmParameterValuecfregionuseast1stackStack1c822e4a2b5e248e64ee706fb7d4af8c80d9b03944eCheckAuthFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
         },
         "Nonce": "",
-        "ServiceToken": Object {
-          "Fn::GetAtt": Array [
+        "ServiceToken": {
+          "Fn::GetAtt": [
             "henristlambdaconfigproviderProviderframeworkonEventB2FC78D4",
             "Arn",
           ],
@@ -682,64 +682,64 @@ Object {
       "Type": "AWS::CloudFormation::CustomResource",
       "UpdateReplacePolicy": "Delete",
     },
-    "AuthClientSecret768E9C19": Object {
+    "AuthClientSecret768E9C19": {
       "DeletionPolicy": "Delete",
-      "DependsOn": Array [
+      "DependsOn": [
         "AuthClientSecretCustomResourcePolicyA4C1D5EC",
       ],
-      "Properties": Object {
-        "Create": Object {
-          "Fn::Join": Array [
+      "Properties": {
+        "Create": {
+          "Fn::Join": [
             "",
-            Array [
-              "{\\"service\\":\\"CognitoIdentityServiceProvider\\",\\"action\\":\\"describeUserPoolClient\\",\\"parameters\\":{\\"UserPoolId\\":\\"",
-              Object {
+            [
+              "{"service":"CognitoIdentityServiceProvider","action":"describeUserPoolClient","parameters":{"UserPoolId":"",
+              {
                 "Ref": "UserPool6BA7E5F2",
               },
-              "\\",\\"ClientId\\":\\"",
-              Object {
+              "","ClientId":"",
+              {
                 "Ref": "UserPoolUserPoolClient40176907",
               },
-              "\\"},\\"physicalResourceId\\":{\\"id\\":\\"",
-              Object {
+              ""},"physicalResourceId":{"id":"",
+              {
                 "Ref": "UserPool6BA7E5F2",
               },
               "-",
-              Object {
+              {
                 "Ref": "UserPoolUserPoolClient40176907",
               },
-              "\\"}}",
+              ""}}",
             ],
           ],
         },
         "InstallLatestAwsSdk": true,
-        "ServiceToken": Object {
-          "Fn::GetAtt": Array [
+        "ServiceToken": {
+          "Fn::GetAtt": [
             "AWS679f53fac002430cb0da5b7982bd22872D164C4C",
             "Arn",
           ],
         },
-        "Update": Object {
-          "Fn::Join": Array [
+        "Update": {
+          "Fn::Join": [
             "",
-            Array [
-              "{\\"service\\":\\"CognitoIdentityServiceProvider\\",\\"action\\":\\"describeUserPoolClient\\",\\"parameters\\":{\\"UserPoolId\\":\\"",
-              Object {
+            [
+              "{"service":"CognitoIdentityServiceProvider","action":"describeUserPoolClient","parameters":{"UserPoolId":"",
+              {
                 "Ref": "UserPool6BA7E5F2",
               },
-              "\\",\\"ClientId\\":\\"",
-              Object {
+              "","ClientId":"",
+              {
                 "Ref": "UserPoolUserPoolClient40176907",
               },
-              "\\"},\\"physicalResourceId\\":{\\"id\\":\\"",
-              Object {
+              ""},"physicalResourceId":{"id":"",
+              {
                 "Ref": "UserPool6BA7E5F2",
               },
               "-",
-              Object {
+              {
                 "Ref": "UserPoolUserPoolClient40176907",
               },
-              "\\"}}",
+              ""}}",
             ],
           ],
         },
@@ -747,15 +747,15 @@ Object {
       "Type": "Custom::AWS",
       "UpdateReplacePolicy": "Delete",
     },
-    "AuthClientSecretCustomResourcePolicyA4C1D5EC": Object {
-      "Properties": Object {
-        "PolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "AuthClientSecretCustomResourcePolicyA4C1D5EC": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
               "Action": "cognito-idp:DescribeUserPoolClient",
               "Effect": "Allow",
-              "Resource": Object {
-                "Fn::GetAtt": Array [
+              "Resource": {
+                "Fn::GetAtt": [
                   "UserPool6BA7E5F2",
                   "Arn",
                 ],
@@ -765,100 +765,100 @@ Object {
           "Version": "2012-10-17",
         },
         "PolicyName": "AuthClientSecretCustomResourcePolicyA4C1D5EC",
-        "Roles": Array [
-          Object {
+        "Roles": [
+          {
             "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
           },
         ],
       },
       "Type": "AWS::IAM::Policy",
     },
-    "AuthClientUpdate3823E358": Object {
+    "AuthClientUpdate3823E358": {
       "DeletionPolicy": "Delete",
-      "DependsOn": Array [
+      "DependsOn": [
         "AuthClientUpdateCustomResourcePolicyF8E9AEC5",
       ],
-      "Properties": Object {
-        "Create": Object {
-          "Fn::Join": Array [
+      "Properties": {
+        "Create": {
+          "Fn::Join": [
             "",
-            Array [
-              "{\\"service\\":\\"CognitoIdentityServiceProvider\\",\\"action\\":\\"updateUserPoolClient\\",\\"parameters\\":{\\"AllowedOAuthFlows\\":[\\"code\\"],\\"AllowedOAuthFlowsUserPoolClient\\":true,\\"SupportedIdentityProviders\\":[\\"COGNITO\\"],\\"AllowedOAuthScopes\\":[\\"phone\\",\\"email\\",\\"profile\\",\\"openid\\",\\"aws.cognito.signin.user.admin\\"],\\"ClientId\\":\\"",
-              Object {
+            [
+              "{"service":"CognitoIdentityServiceProvider","action":"updateUserPoolClient","parameters":{"AllowedOAuthFlows":["code"],"AllowedOAuthFlowsUserPoolClient":true,"SupportedIdentityProviders":["COGNITO"],"AllowedOAuthScopes":["phone","email","profile","openid","aws.cognito.signin.user.admin"],"ClientId":"",
+              {
                 "Ref": "UserPoolUserPoolClient40176907",
               },
-              "\\",\\"CallbackURLs\\":[\\"https://",
-              Object {
-                "Fn::GetAtt": Array [
+              "","CallbackURLs":["https://",
+              {
+                "Fn::GetAtt": [
                   "CloudFrontDistributionCFDistribution599ADCC4",
                   "DomainName",
                 ],
               },
-              "/auth/callback\\"],\\"LogoutURLs\\":[\\"https://",
-              Object {
-                "Fn::GetAtt": Array [
+              "/auth/callback"],"LogoutURLs":["https://",
+              {
+                "Fn::GetAtt": [
                   "CloudFrontDistributionCFDistribution599ADCC4",
                   "DomainName",
                 ],
               },
-              "/\\"],\\"UserPoolId\\":\\"",
-              Object {
+              "/"],"UserPoolId":"",
+              {
                 "Ref": "UserPool6BA7E5F2",
               },
-              "\\"},\\"physicalResourceId\\":{\\"id\\":\\"",
-              Object {
+              ""},"physicalResourceId":{"id":"",
+              {
                 "Ref": "UserPool6BA7E5F2",
               },
               "-",
-              Object {
+              {
                 "Ref": "UserPoolUserPoolClient40176907",
               },
-              "\\"}}",
+              ""}}",
             ],
           ],
         },
         "InstallLatestAwsSdk": true,
-        "ServiceToken": Object {
-          "Fn::GetAtt": Array [
+        "ServiceToken": {
+          "Fn::GetAtt": [
             "AWS679f53fac002430cb0da5b7982bd22872D164C4C",
             "Arn",
           ],
         },
-        "Update": Object {
-          "Fn::Join": Array [
+        "Update": {
+          "Fn::Join": [
             "",
-            Array [
-              "{\\"service\\":\\"CognitoIdentityServiceProvider\\",\\"action\\":\\"updateUserPoolClient\\",\\"parameters\\":{\\"AllowedOAuthFlows\\":[\\"code\\"],\\"AllowedOAuthFlowsUserPoolClient\\":true,\\"SupportedIdentityProviders\\":[\\"COGNITO\\"],\\"AllowedOAuthScopes\\":[\\"phone\\",\\"email\\",\\"profile\\",\\"openid\\",\\"aws.cognito.signin.user.admin\\"],\\"ClientId\\":\\"",
-              Object {
+            [
+              "{"service":"CognitoIdentityServiceProvider","action":"updateUserPoolClient","parameters":{"AllowedOAuthFlows":["code"],"AllowedOAuthFlowsUserPoolClient":true,"SupportedIdentityProviders":["COGNITO"],"AllowedOAuthScopes":["phone","email","profile","openid","aws.cognito.signin.user.admin"],"ClientId":"",
+              {
                 "Ref": "UserPoolUserPoolClient40176907",
               },
-              "\\",\\"CallbackURLs\\":[\\"https://",
-              Object {
-                "Fn::GetAtt": Array [
+              "","CallbackURLs":["https://",
+              {
+                "Fn::GetAtt": [
                   "CloudFrontDistributionCFDistribution599ADCC4",
                   "DomainName",
                 ],
               },
-              "/auth/callback\\"],\\"LogoutURLs\\":[\\"https://",
-              Object {
-                "Fn::GetAtt": Array [
+              "/auth/callback"],"LogoutURLs":["https://",
+              {
+                "Fn::GetAtt": [
                   "CloudFrontDistributionCFDistribution599ADCC4",
                   "DomainName",
                 ],
               },
-              "/\\"],\\"UserPoolId\\":\\"",
-              Object {
+              "/"],"UserPoolId":"",
+              {
                 "Ref": "UserPool6BA7E5F2",
               },
-              "\\"},\\"physicalResourceId\\":{\\"id\\":\\"",
-              Object {
+              ""},"physicalResourceId":{"id":"",
+              {
                 "Ref": "UserPool6BA7E5F2",
               },
               "-",
-              Object {
+              {
                 "Ref": "UserPoolUserPoolClient40176907",
               },
-              "\\"}}",
+              ""}}",
             ],
           ],
         },
@@ -866,15 +866,15 @@ Object {
       "Type": "Custom::AWS",
       "UpdateReplacePolicy": "Delete",
     },
-    "AuthClientUpdateCustomResourcePolicyF8E9AEC5": Object {
-      "Properties": Object {
-        "PolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "AuthClientUpdateCustomResourcePolicyF8E9AEC5": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
               "Action": "cognito-idp:UpdateUserPoolClient",
               "Effect": "Allow",
-              "Resource": Object {
-                "Fn::GetAtt": Array [
+              "Resource": {
+                "Fn::GetAtt": [
                   "UserPool6BA7E5F2",
                   "Arn",
                 ],
@@ -884,36 +884,36 @@ Object {
           "Version": "2012-10-17",
         },
         "PolicyName": "AuthClientUpdateCustomResourcePolicyF8E9AEC5",
-        "Roles": Array [
-          Object {
+        "Roles": [
+          {
             "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
           },
         ],
       },
       "Type": "AWS::IAM::Policy",
     },
-    "AuthHttpHeadersFn7D541668": Object {
+    "AuthHttpHeadersFn7D541668": {
       "DeletionPolicy": "Delete",
-      "Properties": Object {
-        "Config": Object {
+      "Properties": {
+        "Config": {
           "callbackPath": "/auth/callback",
-          "clientId": Object {
+          "clientId": {
             "Ref": "UserPoolUserPoolClient40176907",
           },
-          "clientSecret": Object {
-            "Fn::GetAtt": Array [
+          "clientSecret": {
+            "Fn::GetAtt": [
               "AuthClientSecret768E9C19",
               "UserPoolClient.ClientSecret",
             ],
           },
           "cognitoAuthDomain": "my-domain.auth.eu-west-1.amazoncognito.com",
-          "cookieSettings": Object {
+          "cookieSettings": {
             "accessToken": "Path=/; Secure; HttpOnly; SameSite=Lax",
             "idToken": "Path=/; Secure; HttpOnly; SameSite=Lax",
             "nonce": "Path=/; Secure; HttpOnly; SameSite=Lax",
             "refreshToken": "Path=/; Secure; HttpOnly; SameSite=Lax",
           },
-          "httpHeaders": Object {
+          "httpHeaders": {
             "Cache-Control": "no-cache",
             "Content-Security-Policy": "default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; connect-src 'self'",
             "Referrer-Policy": "same-origin",
@@ -923,13 +923,13 @@ Object {
             "X-XSS-Protection": "1; mode=block",
           },
           "logLevel": "warn",
-          "nonceSigningSecret": Object {
-            "Fn::GetAtt": Array [
+          "nonceSigningSecret": {
+            "Fn::GetAtt": [
               "AuthNonceSigningSecretC47F85D8",
               "Value",
             ],
           },
-          "oauthScopes": Array [
+          "oauthScopes": [
             "phone",
             "email",
             "profile",
@@ -939,16 +939,16 @@ Object {
           "refreshAuthPath": "/auth/refresh",
           "signOutPath": "/auth/sign-out",
           "signOutRedirectTo": "/",
-          "userPoolId": Object {
+          "userPoolId": {
             "Ref": "UserPool6BA7E5F2",
           },
         },
-        "FunctionArn": Object {
+        "FunctionArn": {
           "Ref": "SsmParameterValuecfregionuseast1stackStack1c822e4a2b5e248e64ee706fb7d4af8c80d9b03944eHttpHeadersFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
         },
         "Nonce": "",
-        "ServiceToken": Object {
-          "Fn::GetAtt": Array [
+        "ServiceToken": {
+          "Fn::GetAtt": [
             "henristlambdaconfigproviderProviderframeworkonEventB2FC78D4",
             "Arn",
           ],
@@ -957,12 +957,12 @@ Object {
       "Type": "AWS::CloudFormation::CustomResource",
       "UpdateReplacePolicy": "Delete",
     },
-    "AuthNonceSigningSecretC47F85D8": Object {
+    "AuthNonceSigningSecretC47F85D8": {
       "DeletionPolicy": "Delete",
-      "Properties": Object {
+      "Properties": {
         "Nonce": "",
-        "ServiceToken": Object {
-          "Fn::GetAtt": Array [
+        "ServiceToken": {
+          "Fn::GetAtt": [
             "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventD98C7326",
             "Arn",
           ],
@@ -971,28 +971,28 @@ Object {
       "Type": "AWS::CloudFormation::CustomResource",
       "UpdateReplacePolicy": "Delete",
     },
-    "AuthParseAuthFn975D8094": Object {
+    "AuthParseAuthFn975D8094": {
       "DeletionPolicy": "Delete",
-      "Properties": Object {
-        "Config": Object {
+      "Properties": {
+        "Config": {
           "callbackPath": "/auth/callback",
-          "clientId": Object {
+          "clientId": {
             "Ref": "UserPoolUserPoolClient40176907",
           },
-          "clientSecret": Object {
-            "Fn::GetAtt": Array [
+          "clientSecret": {
+            "Fn::GetAtt": [
               "AuthClientSecret768E9C19",
               "UserPoolClient.ClientSecret",
             ],
           },
           "cognitoAuthDomain": "my-domain.auth.eu-west-1.amazoncognito.com",
-          "cookieSettings": Object {
+          "cookieSettings": {
             "accessToken": "Path=/; Secure; HttpOnly; SameSite=Lax",
             "idToken": "Path=/; Secure; HttpOnly; SameSite=Lax",
             "nonce": "Path=/; Secure; HttpOnly; SameSite=Lax",
             "refreshToken": "Path=/; Secure; HttpOnly; SameSite=Lax",
           },
-          "httpHeaders": Object {
+          "httpHeaders": {
             "Cache-Control": "no-cache",
             "Content-Security-Policy": "default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; connect-src 'self'",
             "Referrer-Policy": "same-origin",
@@ -1002,13 +1002,13 @@ Object {
             "X-XSS-Protection": "1; mode=block",
           },
           "logLevel": "warn",
-          "nonceSigningSecret": Object {
-            "Fn::GetAtt": Array [
+          "nonceSigningSecret": {
+            "Fn::GetAtt": [
               "AuthNonceSigningSecretC47F85D8",
               "Value",
             ],
           },
-          "oauthScopes": Array [
+          "oauthScopes": [
             "phone",
             "email",
             "profile",
@@ -1018,16 +1018,16 @@ Object {
           "refreshAuthPath": "/auth/refresh",
           "signOutPath": "/auth/sign-out",
           "signOutRedirectTo": "/",
-          "userPoolId": Object {
+          "userPoolId": {
             "Ref": "UserPool6BA7E5F2",
           },
         },
-        "FunctionArn": Object {
+        "FunctionArn": {
           "Ref": "SsmParameterValuecfregionuseast1stackStack1c822e4a2b5e248e64ee706fb7d4af8c80d9b03944eParseAuthFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
         },
         "Nonce": "",
-        "ServiceToken": Object {
-          "Fn::GetAtt": Array [
+        "ServiceToken": {
+          "Fn::GetAtt": [
             "henristlambdaconfigproviderProviderframeworkonEventB2FC78D4",
             "Arn",
           ],
@@ -1036,28 +1036,28 @@ Object {
       "Type": "AWS::CloudFormation::CustomResource",
       "UpdateReplacePolicy": "Delete",
     },
-    "AuthRefreshAuthFnEA5CBBAE": Object {
+    "AuthRefreshAuthFnEA5CBBAE": {
       "DeletionPolicy": "Delete",
-      "Properties": Object {
-        "Config": Object {
+      "Properties": {
+        "Config": {
           "callbackPath": "/auth/callback",
-          "clientId": Object {
+          "clientId": {
             "Ref": "UserPoolUserPoolClient40176907",
           },
-          "clientSecret": Object {
-            "Fn::GetAtt": Array [
+          "clientSecret": {
+            "Fn::GetAtt": [
               "AuthClientSecret768E9C19",
               "UserPoolClient.ClientSecret",
             ],
           },
           "cognitoAuthDomain": "my-domain.auth.eu-west-1.amazoncognito.com",
-          "cookieSettings": Object {
+          "cookieSettings": {
             "accessToken": "Path=/; Secure; HttpOnly; SameSite=Lax",
             "idToken": "Path=/; Secure; HttpOnly; SameSite=Lax",
             "nonce": "Path=/; Secure; HttpOnly; SameSite=Lax",
             "refreshToken": "Path=/; Secure; HttpOnly; SameSite=Lax",
           },
-          "httpHeaders": Object {
+          "httpHeaders": {
             "Cache-Control": "no-cache",
             "Content-Security-Policy": "default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; connect-src 'self'",
             "Referrer-Policy": "same-origin",
@@ -1067,13 +1067,13 @@ Object {
             "X-XSS-Protection": "1; mode=block",
           },
           "logLevel": "warn",
-          "nonceSigningSecret": Object {
-            "Fn::GetAtt": Array [
+          "nonceSigningSecret": {
+            "Fn::GetAtt": [
               "AuthNonceSigningSecretC47F85D8",
               "Value",
             ],
           },
-          "oauthScopes": Array [
+          "oauthScopes": [
             "phone",
             "email",
             "profile",
@@ -1083,16 +1083,16 @@ Object {
           "refreshAuthPath": "/auth/refresh",
           "signOutPath": "/auth/sign-out",
           "signOutRedirectTo": "/",
-          "userPoolId": Object {
+          "userPoolId": {
             "Ref": "UserPool6BA7E5F2",
           },
         },
-        "FunctionArn": Object {
+        "FunctionArn": {
           "Ref": "SsmParameterValuecfregionuseast1stackStack1c822e4a2b5e248e64ee706fb7d4af8c80d9b03944eRefreshAuthFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
         },
         "Nonce": "",
-        "ServiceToken": Object {
-          "Fn::GetAtt": Array [
+        "ServiceToken": {
+          "Fn::GetAtt": [
             "henristlambdaconfigproviderProviderframeworkonEventB2FC78D4",
             "Arn",
           ],
@@ -1101,28 +1101,28 @@ Object {
       "Type": "AWS::CloudFormation::CustomResource",
       "UpdateReplacePolicy": "Delete",
     },
-    "AuthSignOutFnD060B75E": Object {
+    "AuthSignOutFnD060B75E": {
       "DeletionPolicy": "Delete",
-      "Properties": Object {
-        "Config": Object {
+      "Properties": {
+        "Config": {
           "callbackPath": "/auth/callback",
-          "clientId": Object {
+          "clientId": {
             "Ref": "UserPoolUserPoolClient40176907",
           },
-          "clientSecret": Object {
-            "Fn::GetAtt": Array [
+          "clientSecret": {
+            "Fn::GetAtt": [
               "AuthClientSecret768E9C19",
               "UserPoolClient.ClientSecret",
             ],
           },
           "cognitoAuthDomain": "my-domain.auth.eu-west-1.amazoncognito.com",
-          "cookieSettings": Object {
+          "cookieSettings": {
             "accessToken": "Path=/; Secure; HttpOnly; SameSite=Lax",
             "idToken": "Path=/; Secure; HttpOnly; SameSite=Lax",
             "nonce": "Path=/; Secure; HttpOnly; SameSite=Lax",
             "refreshToken": "Path=/; Secure; HttpOnly; SameSite=Lax",
           },
-          "httpHeaders": Object {
+          "httpHeaders": {
             "Cache-Control": "no-cache",
             "Content-Security-Policy": "default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; connect-src 'self'",
             "Referrer-Policy": "same-origin",
@@ -1132,13 +1132,13 @@ Object {
             "X-XSS-Protection": "1; mode=block",
           },
           "logLevel": "warn",
-          "nonceSigningSecret": Object {
-            "Fn::GetAtt": Array [
+          "nonceSigningSecret": {
+            "Fn::GetAtt": [
               "AuthNonceSigningSecretC47F85D8",
               "Value",
             ],
           },
-          "oauthScopes": Array [
+          "oauthScopes": [
             "phone",
             "email",
             "profile",
@@ -1148,16 +1148,16 @@ Object {
           "refreshAuthPath": "/auth/refresh",
           "signOutPath": "/auth/sign-out",
           "signOutRedirectTo": "/",
-          "userPoolId": Object {
+          "userPoolId": {
             "Ref": "UserPool6BA7E5F2",
           },
         },
-        "FunctionArn": Object {
+        "FunctionArn": {
           "Ref": "SsmParameterValuecfregionuseast1stackStack1c822e4a2b5e248e64ee706fb7d4af8c80d9b03944eSignOutFunctionfunctionarnC96584B6F00A464EAD1953AFF4B05118Parameter",
         },
         "Nonce": "",
-        "ServiceToken": Object {
-          "Fn::GetAtt": Array [
+        "ServiceToken": {
+          "Fn::GetAtt": [
             "henristlambdaconfigproviderProviderframeworkonEventB2FC78D4",
             "Arn",
           ],
@@ -1166,33 +1166,33 @@ Object {
       "Type": "AWS::CloudFormation::CustomResource",
       "UpdateReplacePolicy": "Delete",
     },
-    "Bucket83908E77": Object {
+    "Bucket83908E77": {
       "DeletionPolicy": "Retain",
       "Type": "AWS::S3::Bucket",
       "UpdateReplacePolicy": "Retain",
     },
-    "CloudFrontDistributionCFDistribution599ADCC4": Object {
-      "Properties": Object {
-        "DistributionConfig": Object {
-          "CacheBehaviors": Array [
-            Object {
-              "AllowedMethods": Array [
+    "CloudFrontDistributionCFDistribution599ADCC4": {
+      "Properties": {
+        "DistributionConfig": {
+          "CacheBehaviors": [
+            {
+              "AllowedMethods": [
                 "GET",
                 "HEAD",
               ],
-              "CachedMethods": Array [
+              "CachedMethods": [
                 "GET",
                 "HEAD",
               ],
               "Compress": true,
-              "ForwardedValues": Object {
+              "ForwardedValues": {
                 "QueryString": true,
               },
-              "LambdaFunctionAssociations": Array [
-                Object {
+              "LambdaFunctionAssociations": [
+                {
                   "EventType": "viewer-request",
-                  "LambdaFunctionARN": Object {
-                    "Fn::GetAtt": Array [
+                  "LambdaFunctionARN": {
+                    "Fn::GetAtt": [
                       "AuthParseAuthFn975D8094",
                       "FunctionArn",
                     ],
@@ -1203,24 +1203,24 @@ Object {
               "TargetOriginId": "origin1",
               "ViewerProtocolPolicy": "redirect-to-https",
             },
-            Object {
-              "AllowedMethods": Array [
+            {
+              "AllowedMethods": [
                 "GET",
                 "HEAD",
               ],
-              "CachedMethods": Array [
+              "CachedMethods": [
                 "GET",
                 "HEAD",
               ],
               "Compress": true,
-              "ForwardedValues": Object {
+              "ForwardedValues": {
                 "QueryString": true,
               },
-              "LambdaFunctionAssociations": Array [
-                Object {
+              "LambdaFunctionAssociations": [
+                {
                   "EventType": "viewer-request",
-                  "LambdaFunctionARN": Object {
-                    "Fn::GetAtt": Array [
+                  "LambdaFunctionARN": {
+                    "Fn::GetAtt": [
                       "AuthRefreshAuthFnEA5CBBAE",
                       "FunctionArn",
                     ],
@@ -1231,24 +1231,24 @@ Object {
               "TargetOriginId": "origin1",
               "ViewerProtocolPolicy": "redirect-to-https",
             },
-            Object {
-              "AllowedMethods": Array [
+            {
+              "AllowedMethods": [
                 "GET",
                 "HEAD",
               ],
-              "CachedMethods": Array [
+              "CachedMethods": [
                 "GET",
                 "HEAD",
               ],
               "Compress": true,
-              "ForwardedValues": Object {
+              "ForwardedValues": {
                 "QueryString": true,
               },
-              "LambdaFunctionAssociations": Array [
-                Object {
+              "LambdaFunctionAssociations": [
+                {
                   "EventType": "viewer-request",
-                  "LambdaFunctionARN": Object {
-                    "Fn::GetAtt": Array [
+                  "LambdaFunctionARN": {
+                    "Fn::GetAtt": [
                       "AuthSignOutFnD060B75E",
                       "FunctionArn",
                     ],
@@ -1260,36 +1260,36 @@ Object {
               "ViewerProtocolPolicy": "redirect-to-https",
             },
           ],
-          "DefaultCacheBehavior": Object {
-            "AllowedMethods": Array [
+          "DefaultCacheBehavior": {
+            "AllowedMethods": [
               "GET",
               "HEAD",
             ],
-            "CachedMethods": Array [
+            "CachedMethods": [
               "GET",
               "HEAD",
             ],
             "Compress": true,
-            "ForwardedValues": Object {
-              "Cookies": Object {
+            "ForwardedValues": {
+              "Cookies": {
                 "Forward": "none",
               },
               "QueryString": false,
             },
-            "LambdaFunctionAssociations": Array [
-              Object {
+            "LambdaFunctionAssociations": [
+              {
                 "EventType": "viewer-request",
-                "LambdaFunctionARN": Object {
-                  "Fn::GetAtt": Array [
+                "LambdaFunctionARN": {
+                  "Fn::GetAtt": [
                     "AuthCheckAuthFnC12AAE69",
                     "FunctionArn",
                   ],
                 },
               },
-              Object {
+              {
                 "EventType": "origin-response",
-                "LambdaFunctionARN": Object {
-                  "Fn::GetAtt": Array [
+                "LambdaFunctionARN": {
+                  "Fn::GetAtt": [
                     "AuthHttpHeadersFn7D541668",
                     "FunctionArn",
                   ],
@@ -1303,50 +1303,50 @@ Object {
           "Enabled": true,
           "HttpVersion": "http2",
           "IPV6Enabled": true,
-          "Origins": Array [
-            Object {
+          "Origins": [
+            {
               "ConnectionAttempts": 3,
               "ConnectionTimeout": 10,
-              "DomainName": Object {
-                "Fn::GetAtt": Array [
+              "DomainName": {
+                "Fn::GetAtt": [
                   "Bucket83908E77",
                   "RegionalDomainName",
                 ],
               },
               "Id": "origin1",
-              "S3OriginConfig": Object {},
+              "S3OriginConfig": {},
             },
           ],
           "PriceClass": "PriceClass_100",
-          "ViewerCertificate": Object {
+          "ViewerCertificate": {
             "CloudFrontDefaultCertificate": true,
           },
         },
       },
       "Type": "AWS::CloudFront::Distribution",
     },
-    "UserPool6BA7E5F2": Object {
+    "UserPool6BA7E5F2": {
       "DeletionPolicy": "Retain",
-      "Properties": Object {
-        "AccountRecoverySetting": Object {
-          "RecoveryMechanisms": Array [
-            Object {
+      "Properties": {
+        "AccountRecoverySetting": {
+          "RecoveryMechanisms": [
+            {
               "Name": "verified_phone_number",
               "Priority": 1,
             },
-            Object {
+            {
               "Name": "verified_email",
               "Priority": 2,
             },
           ],
         },
-        "AdminCreateUserConfig": Object {
+        "AdminCreateUserConfig": {
           "AllowAdminCreateUserOnly": true,
         },
         "EmailVerificationMessage": "The verification code to your new account is {####}",
         "EmailVerificationSubject": "Verify your new account",
         "SmsVerificationMessage": "The verification code to your new account is {####}",
-        "VerificationMessageTemplate": Object {
+        "VerificationMessageTemplate": {
           "DefaultEmailOption": "CONFIRM_WITH_CODE",
           "EmailMessage": "The verification code to your new account is {####}",
           "EmailSubject": "Verify your new account",
@@ -1356,47 +1356,47 @@ Object {
       "Type": "AWS::Cognito::UserPool",
       "UpdateReplacePolicy": "Retain",
     },
-    "UserPoolUserPoolClient40176907": Object {
-      "Properties": Object {
-        "AllowedOAuthFlows": Array [
+    "UserPoolUserPoolClient40176907": {
+      "Properties": {
+        "AllowedOAuthFlows": [
           "code",
         ],
         "AllowedOAuthFlowsUserPoolClient": true,
-        "AllowedOAuthScopes": Array [
+        "AllowedOAuthScopes": [
           "profile",
           "phone",
           "email",
           "openid",
           "aws.cognito.signin.user.admin",
         ],
-        "CallbackURLs": Array [
+        "CallbackURLs": [
           "https://example.com",
         ],
-        "ExplicitAuthFlows": Array [
+        "ExplicitAuthFlows": [
           "ALLOW_USER_PASSWORD_AUTH",
           "ALLOW_USER_SRP_AUTH",
           "ALLOW_REFRESH_TOKEN_AUTH",
         ],
         "GenerateSecret": true,
         "PreventUserExistenceErrors": "ENABLED",
-        "SupportedIdentityProviders": Array [
+        "SupportedIdentityProviders": [
           "COGNITO",
         ],
-        "UserPoolId": Object {
+        "UserPoolId": {
           "Ref": "UserPool6BA7E5F2",
         },
       },
       "Type": "AWS::Cognito::UserPoolClient",
     },
-    "henristcloudfrontauthgeneratesecretproviderFunction3D1AFA99": Object {
-      "DependsOn": Array [
+    "henristcloudfrontauthgeneratesecretproviderFunction3D1AFA99": {
+      "DependsOn": [
         "henristcloudfrontauthgeneratesecretproviderFunctionServiceRole4523A59B",
       ],
-      "Properties": Object {
+      "Properties": {
         "Code": Any<Object>,
         "Handler": "index.handler",
-        "Role": Object {
-          "Fn::GetAtt": Array [
+        "Role": {
+          "Fn::GetAtt": [
             "henristcloudfrontauthgeneratesecretproviderFunctionServiceRole4523A59B",
             "Arn",
           ],
@@ -1405,27 +1405,27 @@ Object {
       },
       "Type": "AWS::Lambda::Function",
     },
-    "henristcloudfrontauthgeneratesecretproviderFunctionServiceRole4523A59B": Object {
-      "Properties": Object {
-        "AssumeRolePolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "henristcloudfrontauthgeneratesecretproviderFunctionServiceRole4523A59B": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
               "Action": "sts:AssumeRole",
               "Effect": "Allow",
-              "Principal": Object {
+              "Principal": {
                 "Service": "lambda.amazonaws.com",
               },
             },
           ],
           "Version": "2012-10-17",
         },
-        "ManagedPolicyArns": Array [
-          Object {
-            "Fn::Join": Array [
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
               "",
-              Array [
+              [
                 "arn:",
-                Object {
+                {
                   "Ref": "AWS::Partition",
                 },
                 ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
@@ -1436,18 +1436,18 @@ Object {
       },
       "Type": "AWS::IAM::Role",
     },
-    "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventD98C7326": Object {
-      "DependsOn": Array [
+    "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventD98C7326": {
+      "DependsOn": [
         "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleDefaultPolicyC126E528",
         "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleEE714F1C",
       ],
-      "Properties": Object {
+      "Properties": {
         "Code": Any<Object>,
         "Description": "AWS CDK resource provider framework - onEvent (Stack2/henrist.cloudfront-auth.generate-secret.provider/Provider)",
-        "Environment": Object {
-          "Variables": Object {
-            "USER_ON_EVENT_FUNCTION_ARN": Object {
-              "Fn::GetAtt": Array [
+        "Environment": {
+          "Variables": {
+            "USER_ON_EVENT_FUNCTION_ARN": {
+              "Fn::GetAtt": [
                 "henristcloudfrontauthgeneratesecretproviderFunction3D1AFA99",
                 "Arn",
               ],
@@ -1455,8 +1455,8 @@ Object {
           },
         },
         "Handler": "framework.onEvent",
-        "Role": Object {
-          "Fn::GetAtt": Array [
+        "Role": {
+          "Fn::GetAtt": [
             "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleEE714F1C",
             "Arn",
           ],
@@ -1466,26 +1466,26 @@ Object {
       },
       "Type": "AWS::Lambda::Function",
     },
-    "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleDefaultPolicyC126E528": Object {
-      "Properties": Object {
-        "PolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleDefaultPolicyC126E528": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
               "Action": "lambda:InvokeFunction",
               "Effect": "Allow",
-              "Resource": Array [
-                Object {
-                  "Fn::GetAtt": Array [
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
                     "henristcloudfrontauthgeneratesecretproviderFunction3D1AFA99",
                     "Arn",
                   ],
                 },
-                Object {
-                  "Fn::Join": Array [
+                {
+                  "Fn::Join": [
                     "",
-                    Array [
-                      Object {
-                        "Fn::GetAtt": Array [
+                    [
+                      {
+                        "Fn::GetAtt": [
                           "henristcloudfrontauthgeneratesecretproviderFunction3D1AFA99",
                           "Arn",
                         ],
@@ -1500,35 +1500,35 @@ Object {
           "Version": "2012-10-17",
         },
         "PolicyName": "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleDefaultPolicyC126E528",
-        "Roles": Array [
-          Object {
+        "Roles": [
+          {
             "Ref": "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleEE714F1C",
           },
         ],
       },
       "Type": "AWS::IAM::Policy",
     },
-    "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleEE714F1C": Object {
-      "Properties": Object {
-        "AssumeRolePolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleEE714F1C": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
               "Action": "sts:AssumeRole",
               "Effect": "Allow",
-              "Principal": Object {
+              "Principal": {
                 "Service": "lambda.amazonaws.com",
               },
             },
           ],
           "Version": "2012-10-17",
         },
-        "ManagedPolicyArns": Array [
-          Object {
-            "Fn::Join": Array [
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
               "",
-              Array [
+              [
                 "arn:",
-                Object {
+                {
                   "Ref": "AWS::Partition",
                 },
                 ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
@@ -1539,18 +1539,18 @@ Object {
       },
       "Type": "AWS::IAM::Role",
     },
-    "henristlambdaconfigproviderProviderframeworkonEventB2FC78D4": Object {
-      "DependsOn": Array [
+    "henristlambdaconfigproviderProviderframeworkonEventB2FC78D4": {
+      "DependsOn": [
         "henristlambdaconfigproviderProviderframeworkonEventServiceRoleDefaultPolicy3D96FE9E",
         "henristlambdaconfigproviderProviderframeworkonEventServiceRole9AA104AD",
       ],
-      "Properties": Object {
+      "Properties": {
         "Code": Any<Object>,
         "Description": "AWS CDK resource provider framework - onEvent (Stack2/henrist.lambda-config.provider/Provider)",
-        "Environment": Object {
-          "Variables": Object {
-            "USER_ON_EVENT_FUNCTION_ARN": Object {
-              "Fn::GetAtt": Array [
+        "Environment": {
+          "Variables": {
+            "USER_ON_EVENT_FUNCTION_ARN": {
+              "Fn::GetAtt": [
                 "henristlambdaconfigproviderUpdateCodeFnBF8DF66B",
                 "Arn",
               ],
@@ -1558,8 +1558,8 @@ Object {
           },
         },
         "Handler": "framework.onEvent",
-        "Role": Object {
-          "Fn::GetAtt": Array [
+        "Role": {
+          "Fn::GetAtt": [
             "henristlambdaconfigproviderProviderframeworkonEventServiceRole9AA104AD",
             "Arn",
           ],
@@ -1569,27 +1569,27 @@ Object {
       },
       "Type": "AWS::Lambda::Function",
     },
-    "henristlambdaconfigproviderProviderframeworkonEventServiceRole9AA104AD": Object {
-      "Properties": Object {
-        "AssumeRolePolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "henristlambdaconfigproviderProviderframeworkonEventServiceRole9AA104AD": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
               "Action": "sts:AssumeRole",
               "Effect": "Allow",
-              "Principal": Object {
+              "Principal": {
                 "Service": "lambda.amazonaws.com",
               },
             },
           ],
           "Version": "2012-10-17",
         },
-        "ManagedPolicyArns": Array [
-          Object {
-            "Fn::Join": Array [
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
               "",
-              Array [
+              [
                 "arn:",
-                Object {
+                {
                   "Ref": "AWS::Partition",
                 },
                 ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
@@ -1600,26 +1600,26 @@ Object {
       },
       "Type": "AWS::IAM::Role",
     },
-    "henristlambdaconfigproviderProviderframeworkonEventServiceRoleDefaultPolicy3D96FE9E": Object {
-      "Properties": Object {
-        "PolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "henristlambdaconfigproviderProviderframeworkonEventServiceRoleDefaultPolicy3D96FE9E": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
               "Action": "lambda:InvokeFunction",
               "Effect": "Allow",
-              "Resource": Array [
-                Object {
-                  "Fn::GetAtt": Array [
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
                     "henristlambdaconfigproviderUpdateCodeFnBF8DF66B",
                     "Arn",
                   ],
                 },
-                Object {
-                  "Fn::Join": Array [
+                {
+                  "Fn::Join": [
                     "",
-                    Array [
-                      Object {
-                        "Fn::GetAtt": Array [
+                    [
+                      {
+                        "Fn::GetAtt": [
                           "henristlambdaconfigproviderUpdateCodeFnBF8DF66B",
                           "Arn",
                         ],
@@ -1634,24 +1634,24 @@ Object {
           "Version": "2012-10-17",
         },
         "PolicyName": "henristlambdaconfigproviderProviderframeworkonEventServiceRoleDefaultPolicy3D96FE9E",
-        "Roles": Array [
-          Object {
+        "Roles": [
+          {
             "Ref": "henristlambdaconfigproviderProviderframeworkonEventServiceRole9AA104AD",
           },
         ],
       },
       "Type": "AWS::IAM::Policy",
     },
-    "henristlambdaconfigproviderUpdateCodeFnBF8DF66B": Object {
-      "DependsOn": Array [
+    "henristlambdaconfigproviderUpdateCodeFnBF8DF66B": {
+      "DependsOn": [
         "henristlambdaconfigproviderUpdateCodeFnServiceRoleDefaultPolicyE51A664A",
         "henristlambdaconfigproviderUpdateCodeFnServiceRole2FF24712",
       ],
-      "Properties": Object {
+      "Properties": {
         "Code": Any<Object>,
         "Handler": "index.handler",
-        "Role": Object {
-          "Fn::GetAtt": Array [
+        "Role": {
+          "Fn::GetAtt": [
             "henristlambdaconfigproviderUpdateCodeFnServiceRole2FF24712",
             "Arn",
           ],
@@ -1661,27 +1661,27 @@ Object {
       },
       "Type": "AWS::Lambda::Function",
     },
-    "henristlambdaconfigproviderUpdateCodeFnServiceRole2FF24712": Object {
-      "Properties": Object {
-        "AssumeRolePolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "henristlambdaconfigproviderUpdateCodeFnServiceRole2FF24712": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
               "Action": "sts:AssumeRole",
               "Effect": "Allow",
-              "Principal": Object {
+              "Principal": {
                 "Service": "lambda.amazonaws.com",
               },
             },
           ],
           "Version": "2012-10-17",
         },
-        "ManagedPolicyArns": Array [
-          Object {
-            "Fn::Join": Array [
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
               "",
-              Array [
+              [
                 "arn:",
-                Object {
+                {
                   "Ref": "AWS::Partition",
                 },
                 ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
@@ -1692,12 +1692,12 @@ Object {
       },
       "Type": "AWS::IAM::Role",
     },
-    "henristlambdaconfigproviderUpdateCodeFnServiceRoleDefaultPolicyE51A664A": Object {
-      "Properties": Object {
-        "PolicyDocument": Object {
-          "Statement": Array [
-            Object {
-              "Action": Array [
+    "henristlambdaconfigproviderUpdateCodeFnServiceRoleDefaultPolicyE51A664A": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
                 "lambda:GetFunction",
                 "lambda:UpdateFunctionCode",
               ],
@@ -1708,8 +1708,8 @@ Object {
           "Version": "2012-10-17",
         },
         "PolicyName": "henristlambdaconfigproviderUpdateCodeFnServiceRoleDefaultPolicyE51A664A",
-        "Roles": Array [
-          Object {
+        "Roles": [
+          {
             "Ref": "henristlambdaconfigproviderUpdateCodeFnServiceRole2FF24712",
           },
         ],
