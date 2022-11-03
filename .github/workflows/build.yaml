@@ -12,6 +12,16 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run test
+
+      # example project
+      - run: npm pack
+      - run: npm ci
+        working-directory: example
+      - run: npm install --no-save ../henrist-cdk-cloudfront-auth-0.0.0-development.tgz
+        working-directory: example
+      - run: npm run test
+        working-directory: example
+
       - run: npm run semantic-release
         if: github.ref == 'refs/heads/master'
         env:
