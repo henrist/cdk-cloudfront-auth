@@ -1,6 +1,5 @@
 import { CloudFrontRequestResult } from "aws-lambda"
 import { createHash, randomBytes } from "crypto"
-import { stringify as stringifyQueryString } from "querystring"
 import { safeBase64Stringify } from "./util/base64"
 import { createRequestHandler, redirectTo, staticPage } from "./util/cloudfront"
 import { Config } from "./util/config"
@@ -98,22 +97,20 @@ function redirectToRefresh({
 }): CloudFrontRequestResult {
   config.logger.info("Redirecting to refresh endpoint")
   const nonce = generateNonce()
-  return redirectTo(
-    `https://${domainName}${config.refreshAuthPath}?${stringifyQueryString({
-      requestedUri,
-      nonce,
-    })}`,
-    {
-      cookies: [
-        `spa-auth-edge-nonce=${encodeURIComponent(nonce)}; ${
-          config.cookieSettings.nonce
-        }`,
-        `spa-auth-edge-nonce-hmac=${encodeURIComponent(
-          createNonceHmac(nonce, config),
-        )}; ${config.cookieSettings.nonce}`,
-      ],
-    },
-  )
+  const qs = new URLSearchParams({
+    requestedUri,
+    nonce,
+  }).toString()
+  return redirectTo(`https://${domainName}${config.refreshAuthPath}?${qs}`, {
+    cookies: [
+      `spa-auth-edge-nonce=${encodeURIComponent(nonce)}; ${
+        config.cookieSettings.nonce
+      }`,
+      `spa-auth-edge-nonce-hmac=${encodeURIComponent(
+        createNonceHmac(nonce, config),
+      )}; ${config.cookieSettings.nonce}`,
+    ],
+  })
 }
 
 function redirectToSignIn({
@@ -137,7 +134,7 @@ function redirectToSignIn({
   // when using multiple identity providers.
   // Cognito decodes the URL, causing a malformed link due to the JSON string,
   // and results in an empty 400 response from Cognito.
-  const loginQueryString = stringifyQueryString({
+  const loginQueryString = new URLSearchParams({
     redirect_uri: `https://${domainName}${config.callbackPath}`,
     response_type: "code",
     client_id: config.clientId,
@@ -149,7 +146,7 @@ function redirectToSignIn({
     scope: config.oauthScopes.join(" "),
     code_challenge_method: "S256",
     code_challenge: state.pkceHash,
-  })
+  }).toString()
 
   // Return redirect to Cognito Hosted UI for sign-in
   return redirectTo(

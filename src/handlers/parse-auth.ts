@@ -1,9 +1,5 @@
 import { CloudFrontResponseResult } from "aws-lambda"
 import { AxiosResponse } from "axios"
-import {
-  parse as parseQueryString,
-  stringify as stringifyQueryString,
-} from "querystring"
 import { httpPostWithRetry } from "./util/axios"
 import { decodeSafeBase64 } from "./util/base64"
 import { createRequestHandler, redirectTo, staticPage } from "./util/cloudfront"
@@ -146,13 +142,13 @@ async function exchangeCodeForTokens({
 > {
   const cognitoTokenEndpoint = `https://${config.cognitoAuthDomain}/oauth2/token`
 
-  const body = stringifyQueryString({
+  const body = new URLSearchParams({
     grant_type: "authorization_code",
     client_id: config.clientId,
     redirect_uri: `https://${domainName}${config.callbackPath}`,
     code,
     code_verifier: pkce,
-  })
+  }).toString()
 
   const requestConfig: Parameters<typeof httpPostWithRetry>[2] = {
     headers: {
@@ -221,15 +217,13 @@ function validateQueryStringAndCookies(props: {
     state,
     error: cognitoError,
     error_description: errorDescription,
-  } = parseQueryString(props.querystring)
+  } = Object.fromEntries(new URLSearchParams(props.querystring).entries())
 
   // Check if Cognito threw an Error.
   // Cognito puts the error in the query string.
   if (cognitoError) {
     return {
-      clientError: `[Cognito] ${cognitoError as string}: ${
-        errorDescription as string
-      }`,
+      clientError: `[Cognito] ${cognitoError}: ${errorDescription}`,
     }
   }
 

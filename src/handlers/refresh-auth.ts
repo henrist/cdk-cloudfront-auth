@@ -1,8 +1,4 @@
 import { AxiosResponse } from "axios"
-import {
-  parse as parseQueryString,
-  stringify as stringifyQueryString,
-} from "querystring"
 import { httpPostWithRetry } from "./util/axios"
 import { createRequestHandler, redirectTo, staticPage } from "./util/cloudfront"
 import { extractAndParseCookies, generateCookies } from "./util/cookies"
@@ -23,8 +19,8 @@ export const handler = createRequestHandler(async (config, event) => {
     })
   }
 
-  const { requestedUri, nonce: currentNonce } = parseQueryString(
-    request.querystring,
+  const { requestedUri, nonce: currentNonce } = Object.fromEntries(
+    new URLSearchParams(request.querystring).entries(),
   )
   redirectedFromUri += requestedUri ?? ""
 
@@ -73,11 +69,11 @@ export const handler = createRequestHandler(async (config, event) => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     postResult = await httpPostWithRetry(
       `https://${config.cognitoAuthDomain}/oauth2/token`,
-      stringifyQueryString({
+      new URLSearchParams({
         grant_type: "refresh_token",
         client_id: config.clientId,
         refresh_token: refreshToken,
-      }),
+      }).toString(),
       { headers },
       config.logger,
     )

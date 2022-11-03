@@ -1,4 +1,3 @@
-import { stringify as stringifyQueryString } from "querystring"
 import { createRequestHandler, redirectTo } from "./util/cloudfront"
 import { extractAndParseCookies, generateCookies } from "./util/cookies"
 
@@ -15,24 +14,21 @@ export const handler = createRequestHandler(async (config, event) => {
     return redirectTo(`https://${domainName}${config.signOutRedirectTo}`)
   }
 
-  const qs = {
+  const qs = new URLSearchParams({
     logout_uri: `https://${domainName}${config.signOutRedirectTo}`,
     client_id: config.clientId,
-  }
+  }).toString()
 
-  return redirectTo(
-    `https://${config.cognitoAuthDomain}/logout?${stringifyQueryString(qs)}`,
-    {
-      cookies: generateCookies({
-        event: "signOut",
-        tokens: {
-          idToken: idToken,
-          accessToken: accessToken ?? "",
-          refreshToken: refreshToken ?? "",
-        },
-        domainName,
-        ...config,
-      }),
-    },
-  )
+  return redirectTo(`https://${config.cognitoAuthDomain}/logout?${qs}`, {
+    cookies: generateCookies({
+      event: "signOut",
+      tokens: {
+        idToken: idToken,
+        accessToken: accessToken ?? "",
+        refreshToken: refreshToken ?? "",
+      },
+      domainName,
+      ...config,
+    }),
+  })
 })
