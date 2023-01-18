@@ -46,7 +46,7 @@
     "axios": "1.2.1",
     "constructs": "10.1.220",
     "cookie": "0.5.0",
-    "eslint": "8.31.0",
+    "eslint": "8.32.0",
     "eslint-config-prettier": "8.6.0",
     "eslint-plugin-prettier": "4.2.1",
     "html-loader": "4.2.0",
