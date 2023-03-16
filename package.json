@@ -36,7 +36,7 @@
     "@commitlint/config-conventional": "17.4.4",
     "@types/aws-lambda": "8.10.111",
     "@types/cookie": "0.5.1",
-    "@types/jest": "29.4.0",
+    "@types/jest": "29.4.1",
     "@types/jsonwebtoken": "8.5.9",
     "@types/node": "18.15.0",
     "@typescript-eslint/eslint-plugin": "5.54.1",
