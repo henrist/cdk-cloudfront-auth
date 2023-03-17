@@ -41,7 +41,7 @@
     "@types/node": "18.15.3",
     "@typescript-eslint/eslint-plugin": "5.55.0",
     "@typescript-eslint/parser": "5.55.0",
-    "aws-cdk-lib": "2.68.0",
+    "aws-cdk-lib": "2.69.0",
     "aws-sdk": "2.1246.0",
     "axios": "1.3.4",
     "constructs": "10.1.277",
