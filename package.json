@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@aws-cdk/assert": "2.68.0",
-    "@commitlint/cli": "17.5.0",
+    "@commitlint/cli": "17.5.1",
     "@commitlint/config-conventional": "17.4.4",
     "@types/aws-lambda": "8.10.114",
     "@types/cookie": "0.5.1",
