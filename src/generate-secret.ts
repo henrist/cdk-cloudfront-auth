@@ -37,7 +37,7 @@ class GenerateSecretProvider extends Construct {
    */
   public static getOrCreate(scope: Construct) {
     const stack = Stack.of(scope)
-    const id = "henrist.cloudfront-auth.generate-secret.provider"
+    const id = "liflig-infra.cloudfront-auth.generate-secret.provider"
     return (
       (stack.node.tryFindChild(id) as GenerateSecretProvider) ||
       new GenerateSecretProvider(stack, id)

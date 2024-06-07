@@ -12,7 +12,7 @@ integration testing.
 cd ..
 npm pack
 cd example
-npm install --no-save ../henrist-cdk-cloudfront-auth-0.0.0-development.tgz
+npm install --no-save ../liflig-cdk-cloudfront-auth-0.0.0-development.tgz
 # must be logged in to aws for next command
 npx cdk deploy --all
 ```
