@@ -1,10 +1,10 @@
 {
-  "name": "@henrist/cdk-cloudfront-auth",
+  "name": "@liflig/cdk-cloudfront-auth",
   "version": "0.0.0-development",
   "description": "CDK Constructs for adding authentication for a CloudFront Distribution",
   "repository": {
     "type": "git",
-    "url": "https://github.com/henrist/cdk-cloudfront-auth"
+    "url": "https://github.com/capralifecycle/cdk-cloudfront-auth"
   },
   "scripts": {
     "build": "rimraf dist && webpack && tsc",
@@ -67,7 +67,7 @@
   },
   "dependencies": {
     "@henrist/cdk-cross-region-params": "^2.0.0",
-    "@henrist/cdk-lambda-config": "^2.1.0"
+    "@liflig/cdk-lambda-config": "1.1.1"
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2.0.0"

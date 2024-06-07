@@ -8,7 +8,7 @@ This is based on https://github.com/aws-samples/cloudfront-authorization-at-edge
 ## Usage
 
 ```bash
-npm install @henrist/cdk-cloudfront-auth
+npm install @liflig/cdk-cloudfront-auth
 ```
 
 Deploy the Lambda@Edge functions to us-east-1:

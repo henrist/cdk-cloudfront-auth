@@ -674,7 +674,7 @@ exports[`A simple example 2`] = `
         "Nonce": "",
         "ServiceToken": {
           "Fn::GetAtt": [
-            "henristlambdaconfigproviderProviderframeworkonEventB2FC78D4",
+            "lifliginfralambdaconfigproviderProviderframeworkonEvent1D60D68A",
             "Arn",
           ],
         },
@@ -949,7 +949,7 @@ exports[`A simple example 2`] = `
         "Nonce": "",
         "ServiceToken": {
           "Fn::GetAtt": [
-            "henristlambdaconfigproviderProviderframeworkonEventB2FC78D4",
+            "lifliginfralambdaconfigproviderProviderframeworkonEvent1D60D68A",
             "Arn",
           ],
         },
@@ -963,7 +963,7 @@ exports[`A simple example 2`] = `
         "Nonce": "",
         "ServiceToken": {
           "Fn::GetAtt": [
-            "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventD98C7326",
+            "lifliginfracloudfrontauthgeneratesecretproviderProviderframeworkonEvent629CC1D7",
             "Arn",
           ],
         },
@@ -1028,7 +1028,7 @@ exports[`A simple example 2`] = `
         "Nonce": "",
         "ServiceToken": {
           "Fn::GetAtt": [
-            "henristlambdaconfigproviderProviderframeworkonEventB2FC78D4",
+            "lifliginfralambdaconfigproviderProviderframeworkonEvent1D60D68A",
             "Arn",
           ],
         },
@@ -1093,7 +1093,7 @@ exports[`A simple example 2`] = `
         "Nonce": "",
         "ServiceToken": {
           "Fn::GetAtt": [
-            "henristlambdaconfigproviderProviderframeworkonEventB2FC78D4",
+            "lifliginfralambdaconfigproviderProviderframeworkonEvent1D60D68A",
             "Arn",
           ],
         },
@@ -1158,7 +1158,7 @@ exports[`A simple example 2`] = `
         "Nonce": "",
         "ServiceToken": {
           "Fn::GetAtt": [
-            "henristlambdaconfigproviderProviderframeworkonEventB2FC78D4",
+            "lifliginfralambdaconfigproviderProviderframeworkonEvent1D60D68A",
             "Arn",
           ],
         },
@@ -1388,16 +1388,16 @@ exports[`A simple example 2`] = `
       },
       "Type": "AWS::Cognito::UserPoolClient",
     },
-    "henristcloudfrontauthgeneratesecretproviderFunction3D1AFA99": {
+    "lifliginfracloudfrontauthgeneratesecretproviderFunction251907C7": {
       "DependsOn": [
-        "henristcloudfrontauthgeneratesecretproviderFunctionServiceRole4523A59B",
+        "lifliginfracloudfrontauthgeneratesecretproviderFunctionServiceRoleA052E250",
       ],
       "Properties": {
         "Code": Any<Object>,
         "Handler": "index.handler",
         "Role": {
           "Fn::GetAtt": [
-            "henristcloudfrontauthgeneratesecretproviderFunctionServiceRole4523A59B",
+            "lifliginfracloudfrontauthgeneratesecretproviderFunctionServiceRoleA052E250",
             "Arn",
           ],
         },
@@ -1405,7 +1405,7 @@ exports[`A simple example 2`] = `
       },
       "Type": "AWS::Lambda::Function",
     },
-    "henristcloudfrontauthgeneratesecretproviderFunctionServiceRole4523A59B": {
+    "lifliginfracloudfrontauthgeneratesecretproviderFunctionServiceRoleA052E250": {
       "Properties": {
         "AssumeRolePolicyDocument": {
           "Statement": [
@@ -1436,19 +1436,19 @@ exports[`A simple example 2`] = `
       },
       "Type": "AWS::IAM::Role",
     },
-    "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventD98C7326": {
+    "lifliginfracloudfrontauthgeneratesecretproviderProviderframeworkonEvent629CC1D7": {
       "DependsOn": [
-        "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleDefaultPolicyC126E528",
-        "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleEE714F1C",
+        "lifliginfracloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleDefaultPolicy518E1DB7",
+        "lifliginfracloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleCB18E252",
       ],
       "Properties": {
         "Code": Any<Object>,
-        "Description": "AWS CDK resource provider framework - onEvent (Stack2/henrist.cloudfront-auth.generate-secret.provider/Provider)",
+        "Description": "AWS CDK resource provider framework - onEvent (Stack2/liflig-infra.cloudfront-auth.generate-secret.provider/Provider)",
         "Environment": {
           "Variables": {
             "USER_ON_EVENT_FUNCTION_ARN": {
               "Fn::GetAtt": [
-                "henristcloudfrontauthgeneratesecretproviderFunction3D1AFA99",
+                "lifliginfracloudfrontauthgeneratesecretproviderFunction251907C7",
                 "Arn",
               ],
             },
@@ -1457,7 +1457,7 @@ exports[`A simple example 2`] = `
         "Handler": "framework.onEvent",
         "Role": {
           "Fn::GetAtt": [
-            "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleEE714F1C",
+            "lifliginfracloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleCB18E252",
             "Arn",
           ],
         },
@@ -1466,7 +1466,38 @@ exports[`A simple example 2`] = `
       },
       "Type": "AWS::Lambda::Function",
     },
-    "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleDefaultPolicyC126E528": {
+    "lifliginfracloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleCB18E252": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "lifliginfracloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleDefaultPolicy518E1DB7": {
       "Properties": {
         "PolicyDocument": {
           "Statement": [
@@ -1476,7 +1507,7 @@ exports[`A simple example 2`] = `
               "Resource": [
                 {
                   "Fn::GetAtt": [
-                    "henristcloudfrontauthgeneratesecretproviderFunction3D1AFA99",
+                    "lifliginfracloudfrontauthgeneratesecretproviderFunction251907C7",
                     "Arn",
                   ],
                 },
@@ -1486,7 +1517,7 @@ exports[`A simple example 2`] = `
                     [
                       {
                         "Fn::GetAtt": [
-                          "henristcloudfrontauthgeneratesecretproviderFunction3D1AFA99",
+                          "lifliginfracloudfrontauthgeneratesecretproviderFunction251907C7",
                           "Arn",
                         ],
                       },
@@ -1499,59 +1530,28 @@ exports[`A simple example 2`] = `
           ],
           "Version": "2012-10-17",
         },
-        "PolicyName": "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleDefaultPolicyC126E528",
+        "PolicyName": "lifliginfracloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleDefaultPolicy518E1DB7",
         "Roles": [
           {
-            "Ref": "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleEE714F1C",
+            "Ref": "lifliginfracloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleCB18E252",
           },
         ],
       },
       "Type": "AWS::IAM::Policy",
     },
-    "henristcloudfrontauthgeneratesecretproviderProviderframeworkonEventServiceRoleEE714F1C": {
-      "Properties": {
-        "AssumeRolePolicyDocument": {
-          "Statement": [
-            {
-              "Action": "sts:AssumeRole",
-              "Effect": "Allow",
-              "Principal": {
-                "Service": "lambda.amazonaws.com",
-              },
-            },
-          ],
-          "Version": "2012-10-17",
-        },
-        "ManagedPolicyArns": [
-          {
-            "Fn::Join": [
-              "",
-              [
-                "arn:",
-                {
-                  "Ref": "AWS::Partition",
-                },
-                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
-              ],
-            ],
-          },
-        ],
-      },
-      "Type": "AWS::IAM::Role",
-    },
-    "henristlambdaconfigproviderProviderframeworkonEventB2FC78D4": {
+    "lifliginfralambdaconfigproviderProviderframeworkonEvent1D60D68A": {
       "DependsOn": [
-        "henristlambdaconfigproviderProviderframeworkonEventServiceRoleDefaultPolicy3D96FE9E",
-        "henristlambdaconfigproviderProviderframeworkonEventServiceRole9AA104AD",
+        "lifliginfralambdaconfigproviderProviderframeworkonEventServiceRoleDefaultPolicy554FD5A5",
+        "lifliginfralambdaconfigproviderProviderframeworkonEventServiceRoleD0656D3D",
       ],
       "Properties": {
         "Code": Any<Object>,
-        "Description": "AWS CDK resource provider framework - onEvent (Stack2/henrist.lambda-config.provider/Provider)",
+        "Description": "AWS CDK resource provider framework - onEvent (Stack2/liflig-infra.lambda-config.provider/Provider)",
         "Environment": {
           "Variables": {
             "USER_ON_EVENT_FUNCTION_ARN": {
               "Fn::GetAtt": [
-                "henristlambdaconfigproviderUpdateCodeFnBF8DF66B",
+                "lifliginfralambdaconfigproviderUpdateCodeFnB8571480",
                 "Arn",
               ],
             },
@@ -1560,7 +1560,7 @@ exports[`A simple example 2`] = `
         "Handler": "framework.onEvent",
         "Role": {
           "Fn::GetAtt": [
-            "henristlambdaconfigproviderProviderframeworkonEventServiceRole9AA104AD",
+            "lifliginfralambdaconfigproviderProviderframeworkonEventServiceRoleD0656D3D",
             "Arn",
           ],
         },
@@ -1569,7 +1569,7 @@ exports[`A simple example 2`] = `
       },
       "Type": "AWS::Lambda::Function",
     },
-    "henristlambdaconfigproviderProviderframeworkonEventServiceRole9AA104AD": {
+    "lifliginfralambdaconfigproviderProviderframeworkonEventServiceRoleD0656D3D": {
       "Properties": {
         "AssumeRolePolicyDocument": {
           "Statement": [
@@ -1600,7 +1600,7 @@ exports[`A simple example 2`] = `
       },
       "Type": "AWS::IAM::Role",
     },
-    "henristlambdaconfigproviderProviderframeworkonEventServiceRoleDefaultPolicy3D96FE9E": {
+    "lifliginfralambdaconfigproviderProviderframeworkonEventServiceRoleDefaultPolicy554FD5A5": {
       "Properties": {
         "PolicyDocument": {
           "Statement": [
@@ -1610,7 +1610,7 @@ exports[`A simple example 2`] = `
               "Resource": [
                 {
                   "Fn::GetAtt": [
-                    "henristlambdaconfigproviderUpdateCodeFnBF8DF66B",
+                    "lifliginfralambdaconfigproviderUpdateCodeFnB8571480",
                     "Arn",
                   ],
                 },
@@ -1620,7 +1620,7 @@ exports[`A simple example 2`] = `
                     [
                       {
                         "Fn::GetAtt": [
-                          "henristlambdaconfigproviderUpdateCodeFnBF8DF66B",
+                          "lifliginfralambdaconfigproviderUpdateCodeFnB8571480",
                           "Arn",
                         ],
                       },
@@ -1633,35 +1633,35 @@ exports[`A simple example 2`] = `
           ],
           "Version": "2012-10-17",
         },
-        "PolicyName": "henristlambdaconfigproviderProviderframeworkonEventServiceRoleDefaultPolicy3D96FE9E",
+        "PolicyName": "lifliginfralambdaconfigproviderProviderframeworkonEventServiceRoleDefaultPolicy554FD5A5",
         "Roles": [
           {
-            "Ref": "henristlambdaconfigproviderProviderframeworkonEventServiceRole9AA104AD",
+            "Ref": "lifliginfralambdaconfigproviderProviderframeworkonEventServiceRoleD0656D3D",
           },
         ],
       },
       "Type": "AWS::IAM::Policy",
     },
-    "henristlambdaconfigproviderUpdateCodeFnBF8DF66B": {
+    "lifliginfralambdaconfigproviderUpdateCodeFnB8571480": {
       "DependsOn": [
-        "henristlambdaconfigproviderUpdateCodeFnServiceRoleDefaultPolicyE51A664A",
-        "henristlambdaconfigproviderUpdateCodeFnServiceRole2FF24712",
+        "lifliginfralambdaconfigproviderUpdateCodeFnServiceRoleDefaultPolicy02148DBC",
+        "lifliginfralambdaconfigproviderUpdateCodeFnServiceRole1C9B6DC9",
       ],
       "Properties": {
         "Code": Any<Object>,
         "Handler": "index.handler",
         "Role": {
           "Fn::GetAtt": [
-            "henristlambdaconfigproviderUpdateCodeFnServiceRole2FF24712",
+            "lifliginfralambdaconfigproviderUpdateCodeFnServiceRole1C9B6DC9",
             "Arn",
           ],
         },
-        "Runtime": "nodejs16.x",
+        "Runtime": "nodejs18.x",
         "Timeout": 10,
       },
       "Type": "AWS::Lambda::Function",
     },
-    "henristlambdaconfigproviderUpdateCodeFnServiceRole2FF24712": {
+    "lifliginfralambdaconfigproviderUpdateCodeFnServiceRole1C9B6DC9": {
       "Properties": {
         "AssumeRolePolicyDocument": {
           "Statement": [
@@ -1692,7 +1692,7 @@ exports[`A simple example 2`] = `
       },
       "Type": "AWS::IAM::Role",
     },
-    "henristlambdaconfigproviderUpdateCodeFnServiceRoleDefaultPolicyE51A664A": {
+    "lifliginfralambdaconfigproviderUpdateCodeFnServiceRoleDefaultPolicy02148DBC": {
       "Properties": {
         "PolicyDocument": {
           "Statement": [
@@ -1707,10 +1707,10 @@ exports[`A simple example 2`] = `
           ],
           "Version": "2012-10-17",
         },
-        "PolicyName": "henristlambdaconfigproviderUpdateCodeFnServiceRoleDefaultPolicyE51A664A",
+        "PolicyName": "lifliginfralambdaconfigproviderUpdateCodeFnServiceRoleDefaultPolicy02148DBC",
         "Roles": [
           {
-            "Ref": "henristlambdaconfigproviderUpdateCodeFnServiceRole2FF24712",
+            "Ref": "lifliginfralambdaconfigproviderUpdateCodeFnServiceRole1C9B6DC9",
           },
         ],
       },
