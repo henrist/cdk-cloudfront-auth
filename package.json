@@ -60,7 +60,7 @@
     "semantic-release": "19.0.5",
     "ts-jest": "29.1.1",
     "ts-loader": "9.4.4",
-    "ts-node": "10.9.1",
+    "ts-node": "10.9.2",
     "typescript": "4.9.5",
     "webpack": "5.88.2",
     "webpack-cli": "4.10.0"
