@@ -9,7 +9,7 @@
     "@types/node": "18.19.39",
     "aws-cdk": "2.148.1",
     "ts-node": "10.9.2",
-    "typescript": "4.9.5"
+    "typescript": "5.6.2"
   },
   "dependencies": {
     "@henrist/cdk-cloudfront-auth": "^2",
