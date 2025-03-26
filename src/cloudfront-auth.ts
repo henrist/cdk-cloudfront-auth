@@ -66,6 +66,12 @@ export interface CloudFrontAuthProps {
    * access any resource.
    */
   requireGroupAnyOf?: string[]
+  /**
+   * HTTP headers to be added to all CloudFront responses.
+   *
+   * @example { "Referrer-Policy": "same-origin" }
+   */
+  httpHeaders?: Record<string, string>
 }
 
 export interface UpdateClientProps {
@@ -161,6 +167,7 @@ export class CloudFrontAuth extends Construct {
         "X-Frame-Options": "DENY",
         "X-Content-Type-Options": "nosniff",
         "Cache-Control": "no-cache",
+        ...(props.httpHeaders ?? {}),
       },
       logLevel: props.logLevel ?? "warn",
       userPoolId: this.userPool.userPoolId,
